@@ -99,3 +99,18 @@ a {
  }
 }
 /* end of Banner section */
+
+/* start of Login Form */
+.email-box{
+  @apply block bg-blue-200 text-center my-3;
+}
+.email{
+    @apply border border-2 rounded w-4/12;
+}
+.password-box{
+  @apply bg-blue-200 text-center;
+}
+.password{
+  @apply border border-2 rounded w-4/12;
+}
+/* end of Login Form */
