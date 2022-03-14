@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar/navbar'
-import Banner from '../components/Banner/banner'
-import WebBasic from './WebBasic/webbasic';
+import Banner from '../components/Banner/banner';
 const Subject = [
   {
     id: "html",
@@ -37,7 +36,6 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Banner/>
-      <WebBasic subject={Subject}/>
     </div>
   )
 }

@@ -1,7 +1,7 @@
-const WebBasic =(props)=>{
+/* const WebBasic =(props)=>{
     return (
       <div className="container">
-        <div className="row md:mx-5 md:my-5 my-3">
+        {/* <div className="row md:mx-5 md:my-5 my-3">
           <div className="card grid lg:grid-cols-4  lg:gap-4 sm:grid-cols-2 sm:gap-3  gap-3">
             {props.subject.map((item, index) => {
               return (
@@ -23,11 +23,11 @@ const WebBasic =(props)=>{
                   </p>
                 </div>
               );
-            })}
+            })} */}
           </div>
         </div>
       </div>
     );
 }
 
-export default WebBasic;
+export default WebBasic; */

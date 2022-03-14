@@ -1,6 +1,6 @@
 const Banner=()=>{
     return(
-        <div className="container-fluid banner">
+        <div className="container-fluid banner shadow-xl">
             <div className="row">
                 <div className="title">
                     <h1 className="">چراغ</h1>

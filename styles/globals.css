@@ -6,7 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:BYkan;
+  font-family: BYkan;
+  direction: rtl;
 }
 @font-face {
   font-family: BYkan;
@@ -22,93 +23,99 @@ a {
 }
 
 /* start of Navigation Bar */
-.navigation-bar{
-/* background-image: linear-gradient(135deg, #FFFEFF 10%, #D7FFFE 100%); */
+.navigation-bar {
+  /* background-image: linear-gradient(135deg, #FFFEFF 10%, #D7FFFE 100%); */
 }
-.regester{
-
+.regester {
 }
-.regester:hover{
+.regester:hover {
   color: gray;
   transition: 0.6s;
   text-decoration: dashed;
 }
-.items:hover{
+.items {
+  transition: 0.7s;
+  transition-delay: 0.4s;
+}
+\
+.items:hover {
   color: green;
   transition: 0.7s;
   border-radius: 5px;
 }
-.items{
-  @apply px-4 py-3;
+.items {
+  @apply mx-4 py-1 md:hover:bg-gray-100 hover:px-3;
 }
 /* end of Navigation Bar */
 
 /* start of Banner section */
-.banner{
-  background-image: linear-gradient(135deg, #FFFEFF 30%,#D7FFFE 100%);
-/*  background-image: linear-gradient(135deg, #69FF97 10%, #00E4FF 100%); */
+.banner {
+  background-image: linear-gradient(135deg, #fffeff 30%, #d7fffe 100%);
+  /*  background-image: linear-gradient(135deg, #69FF97 10%, #00E4FF 100%); */
   height: 40vh;
   text-align: center;
+
 }
-.title h1{
-    letter-spacing: 7px;
-    color: green;
+.bg{
+  background-image: linear-gradient(135deg, #fffeff 30%, #d7fffe 100%);
 }
-.title h1{
+.title h1 {
+  letter-spacing: 7px;
+  color: green;
+}
+.title h1 {
   @apply font-bold text-3xl pt-10;
 }
-.description span{
+.description span {
   word-spacing: 3px;
   letter-spacing: 2px;
 }
-.description{
+.description {
   @apply mt-5 text-green-900 font-bold;
 }
-.banner .title h1{
+.banner .title h1 {
   animation-name: Light;
   animation-duration: 4s;
 }
-@keyframes Light{
- 0%{
-     opacity: 0;
-     transform: translateX(100px);
- }
- 100%{
-     opacity: 1;
-     transform: translateX(0px);
- }
- 
+@keyframes Light {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
-.banner .description span{
- animation-name: cooding;
- animation-duration: 4s;
- animation-delay: 1s;
- animation-fill-mode: backwards;
+.banner .description span {
+  animation-name: cooding;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
 }
 @keyframes cooding {
- 0%{
-     opacity: 0;
-     transform: translateX(120px);
-     
- }
- 100%{
-     opacity: 1;
-     transform: translateX(0px);
- }
+  0% {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 /* end of Banner section */
 
 /* start of Login Form */
-.email-box{
+.email-box {
   @apply block bg-blue-200 text-center my-3;
 }
-.email{
-    @apply border border-2 rounded w-4/12;
+.email {
+  @apply border border-2 rounded w-4/12;
 }
-.password-box{
+.password-box {
   @apply bg-blue-200 text-center;
 }
-.password{
+.password {
   @apply border border-2 rounded w-4/12;
 }
 /* end of Login Form */
