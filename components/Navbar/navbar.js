@@ -70,11 +70,15 @@ const Navbar = () => {
                 ></img>
               )}
             </span>
-            <Link href='/login'>
-              <span className="regester btn cursor-pointer rounded text-blue-800 font-bold px-5 py-2">
-                ثبت نام / ورورد
-              </span>
-            </Link>
+
+            <span className="regester btn cursor-pointer rounded text-center text-blue-800 font-bold px-5 py-2">
+              <Link href="/login">
+                <a className="login">ورود</a>
+              </Link>
+              <Link href="/regester">
+                <a className="hover:text-gray-500 "> / ثبت نام</a>
+              </Link>
+            </span>
           </div>
         </div>
       </div>
