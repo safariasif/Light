@@ -39,7 +39,7 @@ const Regester = () => {
                 type="password"
               ></input>
             </div>
-            <div className='md:my-2'>
+            <div className="md:my-2">
               <label className="text-gray-600 px-2 font-bold">
                 تکرار رمز عبور :{' '}
               </label>
@@ -58,44 +58,75 @@ const Regester = () => {
               </Link>
             </div>
           </form>
+          {/* <div className=" lg:grid lg:grid-cols-4 w-full mx-auto my-5">
+            <div className="flex justify-between  text-start py-3">
+              <Link href="/google">
+                <a className="">ورود با فسبوک</a>
+              </Link>
+              <Link href="/google">
+                <img src="/facebook.svg" className="rounded bg-red-800"></img>
+              </Link>
+            </div>
+            <div className="flex justify-between py-3  text-start">
+              <Link href="/google">
+                <a className="">ورود با انستگرام</a>
+              </Link>
+              <Link href="/google">
+                <img src="/instagram.svg" className=" rounded bg-red-800"></img>
+              </Link>
+            </div>
+            <div className="flex justify-between py-3">
+              <Link href="/google">
+                <a className="">ورود با لینکدین</a>
+              </Link>
+              <Link href="/google">
+                <img src="/linkdin.svg" className=" rounded bg-red-800"></img>
+              </Link>
+            </div>
+            <div className="flex justify-between py-3">
+              <Link href="/google">
+                <a className="">ورود با تویتر</a>
+              </Link>
+              <Link href="/google">
+                <img src="/twitter.svg" className="rounded bg-red-800"></img>
+              </Link>
+            </div>
+          </div> */}
         </div>
-        <div className="bg-blue-500 grid grid-cols-2 md:block justify-center  items-center md:mt-20 mt-4">
-          <div className="flex justify-between  text-start py-3">
-            <Link href="/google">
-              <a className="text-white">ورود با فسبوک</a>
-            </Link>
-            <Link href="/google">
-              <img src="/facebook.svg" className="px-4 h-6"></img>
-            </Link>
+        <div className="border border-2 px-12 md:mt-16 rounded-md   mx-3 items-center justify-center">
+          <h1 className="my-0 py-0 pt-4  text-center">
+            انتخاب تصویر دلخواه است
+          </h1>
+          <div className="bg-gray-800 grid md:block justify-center md:w-36 md:h-36 w-24 h-24 mt-4 rounded-full items-center"></div>
+          <div className="bg-gray-700 grid  md:block   md:w-20 md:h-20 w-16 h-16 rounded-full  items-center mt-[-30px]   small-circle ">
+            <input
+              className="w-10 my-5   w-20 h-36 rounded-full  opacity-0"
+              type="file"
+              onClick={() => imagePreview}
+            ></input>
           </div>
-          <div className="flex justify-between py-3  text-start">
-            <Link href="/google">
-              <a className="text-white">ورود با انستگرام</a>
-            </Link>
-            <Link href="/google">
-              <img src="/instagram.svg" className=" px-4 h-6"></img>
-            </Link>
-          </div>
-          <div className="flex justify-between py-3">
-            <Link href="/google">
-              <a className="text-white">ورود با لینکدین</a>
-            </Link>
-            <Link href="/google">
-              <img src="/linkdin.svg" className="px-4 h-6"></img>
-            </Link>
-          </div>
-          <div className="flex justify-between py-3">
-            <Link href="/google">
-              <a className="text-white">ورود با تویتر</a>
-            </Link>
-            <Link href="/google">
-              <img src="/twitter.svg" className="px-4 h-6"></img>
-            </Link>
+          <div className="my-4  mr-0 m-0 flex-wrap">
+            <h1>آصف صفری</h1>
+            <span className="m-0 p-0">mohammadasifsafari1997@gmail.com</span>
+            <h1>{}</h1>
           </div>
         </div>
       </div>
     </div>
   );
+   function imagePreview(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        document.querySelector('.imagePreview').src = e.target.result;
+        document.querySelector('.imgname').innerHTML = input.files[0].name;
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
 };
 
 export default Regester;
+
+ 
