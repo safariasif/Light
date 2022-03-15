@@ -1,21 +1,87 @@
-const Data ={
-    WebBasic:[
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-    ],
-    JavaScript:[
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-    ]
-}
+const Data = {
+  WebBasic: [
+    {
+      id: 1,
+      name: 'html',
+      slug: 'html',
+      img: '/',
+      time: '2:23:00',
+      instructor: 'آصف صفری',
+      description:
+        'اچ تی ام ال مخفف Hyper Text MArkuP language  و یک زبان نشانه گذاری میباشد',
+      price: 'رایگان',
+      timeRecord: '03-15-2022',
+      viewver: 12,
+      like: 13,
+      heart: 23,
+      comment: 12,
+    },
+    {
+      id: 2,
+      name: 'css',
+      slug: 'css',
+      img: '/',
+      time: '1:50:00',
+      instructor: 'آصف صفری',
+      description:
+        'سی اس اس مخفف Cascading Style Sheet  و برای طراحی ایلمین های css مورد استفاده قرار میگیرد',
+      price: 'رایگان',
+      timeRecord: '03-15-2022',
+      viewver: 12,
+      like: 13,
+      heart: 23,
+      comment: 12,
+    },
+    {
+      id: 3,
+      name: 'Bootstrap',
+      slug: 'Bootsrap',
+      img: '/',
+      time: '6:40:00',
+      instructor: 'آصف صفری',
+      description:
+        'بوت استرپ یکی از فرم ورک های مشهور css میباشد که با استفاده ازین فرم ورک به طراحی صفحات سرعت دو چند میبخشد',
+      price: 'رایگان',
+      timeRecord: '03-15-2022',
+      viewver: 12,
+      like: 13,
+      heart: 23,
+      comment: 12,
+    },
+    {
+      id: 4,
+      name: 'FlexBox',
+      slug: 'FlexBox',
+      img: '/',
+      time: '1:50:00',
+      instructor: 'آصف صفری',
+      description:
+        'فلیکس باکس یک از تکنالوژی های css است که برای چینیش ایلمنت های اچ تی ام ال در یگ بعد صفحه قرار میگیرد',
+      price: 'رایگان',
+      timeRecord: '03-15-2022',
+      viewver: 12,
+      like: 13,
+      heart: 23,
+      comment: 12,
+    },
+    {
+      id: 5,
+      name: 'CSSGrid',
+      slug: 'cssgrid',
+      img: '/',
+      time: '2:30:00',
+      instructor: 'آصف صفری',
+      description:
+        'فلیکس باکس یک از تکنالوژی های css است که برای چینیش ایلمنت های اچ تی ام ال در دو بعد صفحه قرار میگیرد',
+      price: 'رایگان',
+      timeRecord: '03-15-2022',
+      viewver: 12,
+      like: 13,
+      heart: 23,
+      comment: 12,
+    },
+  ],
+  JavaScript: [{}, {}, {}, {}, {}, {}],
+};
 
 export default  Data;
