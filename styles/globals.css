@@ -114,3 +114,12 @@ a {
   @apply border border-2 rounded w-4/12;
 }
 /* end of Login Form */
+
+/* start of footer */
+.footer{
+ 
+  background-image: linear-gradient(#0021ae,#00dfa2);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 20px;
+}
+/* end of footer */
