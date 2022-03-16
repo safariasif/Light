@@ -2,9 +2,10 @@ const Data = {
   WebBasic: [
     {
       id: 1,
+      info: 'آموزش صفر تا به صد : ',
       name: 'html',
       slug: 'html',
-      img: '/',
+      img: '/Web/js.svg',
       time: '2:23:00',
       instructor: 'آصف صفری',
       description:
@@ -18,9 +19,10 @@ const Data = {
     },
     {
       id: 2,
+      info: 'آموزش صفر تا به صد : ',
       name: 'css',
       slug: 'css',
-      img: '/',
+      img: '/Web/js.svg',
       time: '1:50:00',
       instructor: 'آصف صفری',
       description:
@@ -34,9 +36,10 @@ const Data = {
     },
     {
       id: 3,
+      info: 'آموزش صفر تا به صد : ',
       name: 'Bootstrap',
       slug: 'Bootsrap',
-      img: '/',
+      img: '/Web/js.svg',
       time: '6:40:00',
       instructor: 'آصف صفری',
       description:
@@ -50,9 +53,10 @@ const Data = {
     },
     {
       id: 4,
+      info: 'آموزش صفر تا به صد : ',
       name: 'FlexBox',
       slug: 'FlexBox',
-      img: '/',
+      img: '/Web/js.svg',
       time: '1:50:00',
       instructor: 'آصف صفری',
       description:
@@ -66,10 +70,28 @@ const Data = {
     },
     {
       id: 5,
+      info: 'آموزش صفر تا به صد : ',
       name: 'CSSGrid',
       slug: 'cssgrid',
-      img: '/',
+      img: '/Web/js.svg',
       time: '2:30:00',
+      instructor: 'آصف صفری',
+      description:
+        'فلیکس باکس یک از تکنالوژی های css است که برای چینیش ایلمنت های اچ تی ام ال در دو بعد صفحه قرار میگیرد',
+      price: 'رایگان',
+      timeRecord: '03-15-2022',
+      viewver: 12,
+      like: 13,
+      heart: 23,
+      comment: 12,
+    },
+    {
+      id: 6,
+      info: 'طراحی  : ',
+      name: ' قالب فروشگاه آنلاین',
+      slug: 'online-store',
+      img: '/Web/onlinestore.svg',
+      time: '2:10:00',
       instructor: 'آصف صفری',
       description:
         'فلیکس باکس یک از تکنالوژی های css است که برای چینیش ایلمنت های اچ تی ام ال در دو بعد صفحه قرار میگیرد',
