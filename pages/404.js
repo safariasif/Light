@@ -17,7 +17,7 @@ const NotFount=()=>{
         <img src="/404.svg" className="mx-auto w-48 mb-4"></img>
         <h1 className="text-4xl  my-2 text-red-500">
           <span className=" px-2"> متعسفانه</span>
-          <span className="">صفحه یافت نشد</span>
+          <span className=""> صفحه یافت نشد </span>
         </h1>
         <h1 className="text-sm mt-3 mb-5 text-gray-600">
           بعد از پنج ثانیه صفحه بصورت خودکار برگشت خواهد نمود
