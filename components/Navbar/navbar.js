@@ -20,7 +20,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/Course">
+              <Link href="/courses/courses">
                 <a>دوره های آموزشی</a>
               </Link>
             </li>
@@ -50,7 +50,7 @@ const Navbar = () => {
               </Link>
             </li>
             <span className="regester btn cursor-pointer lg:hidden block grid grid-cols-2 rounded text-center text-blue-800 font-bold px-5  w-full mt-2 justify-around">
-              <span className='bg-green-300 py-2 mx-2 rounded-md'>
+              <span className="bg-green-300 py-2 mx-2 rounded-md">
                 <Link href="/login">
                   <a className="login">ورود</a>
                 </Link>

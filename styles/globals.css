@@ -123,3 +123,76 @@ a {
   border-top-right-radius: 20px;
 }
 /* end of footer */
+
+
+/* start of Courses */
+.headerCourse h1{
+  animation-name: headercourse;
+  animation-duration: 4s;
+}
+@keyframes headercourse {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    color: yellow;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.bannerCourse h1{
+  animation-name: bannerCourse;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes bannerCourse {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    color: brown;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.footerCourse button{
+  animation-name: footerCourse;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+@keyframes footerCourse {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    color: #0021ae;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    color: green;
+  }
+}
+.catagory:hover .courses{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.courses{
+  color: #0021ae;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.7s;
+}
+.courses li{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.courses li:hover{
+  background-color: green;
+  color: white;
+}
+/* end of Courses */

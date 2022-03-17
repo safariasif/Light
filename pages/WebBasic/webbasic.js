@@ -32,7 +32,7 @@ const WebBasic = () => {
                 className=" space-x-2 md:space-x-4 border border-2  rounded-xl cursor-pointer"
               >
                 <div className="bg-gray-100">
-                  <Link href="/webcousere" key={index}>
+                  <Link href={`/WebBasic/${item.slug}`} key={index}>
                     <div>
                       <div
                         style={{ direction: 'ltr' }}
