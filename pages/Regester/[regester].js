@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Meta from '../../components/Meta/Meta';
 import Navbar from '../../components/Navbar/navbar';
 import { Component } from 'react';
+import Input from './inputRegester';
 class Regester extends Component {
   state = {
     account: {
@@ -16,6 +17,7 @@ class Regester extends Component {
     this.setState({account})
   }
   render() {
+    const {name,email}=this.state.account;
     return (
       <div>
         <Meta title={'ثبت نام'} icon={'/404.svg'}></Meta>
@@ -26,54 +28,35 @@ class Regester extends Component {
               <div className="text-center font-bold text-2xl">
                 <h1>ثبت نام</h1>
               </div>
-              <div className="md:my-2">
-                <label className="text-gray-600 px-2 font-bold">
-                  نام و نام فامیلی :{' '}
-                </label>
-                <input
-                  className="form-control rounded-full border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg"
-                  placeholder="نام و نام فامیلی خود را وارد نمایید"
-                  required
-                  type="text"
-                  name="name"
-                  onChange={this.handelPrees}
-                  value={this.state.account.name}
-                ></input>
-              </div>
-              <div className="md:my-2">
-                <label className="text-gray-600 px-2 font-bold">ایمیل:</label>
-                <input
-                  className="form-control rounded-full border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg"
-                  placeholder="ایمیل خود را وارد نمایید"
-                  required
-                  type="email"
-                  name="email"
-                  onChange={this.handelPrees}
-                  value={this.state.account.email}
-                ></input>
-              </div>
-              <div>
-                <label className="text-gray-600 px-2 font-bold">
-                  رمز عبور :
-                </label>
-                <input
-                  className="form-control rounded-full border border-2 w-full py-1 outline-none px-4 shadow-lg"
-                  placeholder="رمز عبور خود را وارد نمایید"
-                  required
-                  type="password"
-                ></input>
-              </div>
-              <div className="md:my-2">
-                <label className="text-gray-600 px-2 font-bold">
-                  تکرار رمز عبور :{' '}
-                </label>
-                <input
-                  className="form-control rounded-full border border-2 w-full py-1 outline-none px-4 shadow-lg"
-                  placeholder="رمز عبور خود را وارد نمایید"
-                  required
-                  type="password"
-                ></input>
-              </div>
+
+              <Input
+                label={'نام و نام فامیلی : '}
+                name={'name'}
+                placeholder={'نام خود را وارد کنید'}
+                type={'text'}
+                value={name}
+                onChange={this.handelPrees}
+              />
+              <Input
+                name={'email'}
+                placeholder={'ایمیل خود را وارد کنید'}
+                type={'email'}
+                value={email}
+                label={'ایمیل تان را وارد کیند : '}
+                onChange={this.handelPrees}
+              />
+              <Input
+                name={'password'}
+                placeholder={'رمز عبور خود را وارد کنید'}
+                type={'password'}
+                label={'رمر عبور : '}
+              />
+              <Input
+                name={'password'}
+                placeholder={'تکرار رمز عبور'}
+                type={'password'}
+                label={'تکرار رمز عبور : '}
+              />
               <div className="my-4">
                 <Link href="/Regester/regester">
                   <button className="block w-full py-2 bg-green-400 text-gray-700 hover:bg-green-300 transition-all hover:text-gray-800 rounded-full shadow-lg">
@@ -130,15 +113,11 @@ class Regester extends Component {
             </div>
             <div className="my-4  mr-0 m-0 flex-wrap">
               <h1 className="text-gray-700">{`${
-                this.state.account.name
-                  ? this.state.account.name
-                  : `« به دنیایی برنامه نویسی  وب خوش آمدید »`
+                name ? name : `« به دنیایی برنامه نویسی  وب خوش آمدید »`
               }`}</h1>
               <span className="m-0 p-0">
                 <h1 className="text-gray-700">{`${
-                  this.state.account.email
-                    ? this.state.account.email
-                    : `« موفقیت شما به نور چراغ افزایش میدهد »`
+                  email ? email : `« موفقیت شما به نور چراغ افزایش میدهد »`
                 }`}</h1>
               </span>
               <h1></h1>
