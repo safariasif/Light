@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Navbar from '../../components/Navbar/navbar'
 import Meta from '../../components/Meta/Meta'
+import Input from '../Regester/inputRegester';
 const Login=()=>{
     return (
       <div>
@@ -12,26 +13,8 @@ const Login=()=>{
               <div className="text-center font-bold text-2xl">
                 <h1>ورود</h1>
               </div>
-              <div className="md:my-2">
-                <label className="text-gray-600 px-2 font-bold">ایمیل:</label>
-                <input
-                  className="form-control rounded-md border border-2 w-full py-1  my-2 outline-none px-4"
-                  placeholder="ایمیل خود را وارد نمایید"
-                  required
-                  type="email"
-                ></input>
-              </div>
-              <div>
-                <label className="text-gray-600 px-2 font-bold">
-                  رمز عبور :
-                </label>
-                <input
-                  className="form-control rounded-md border border-2 w-full py-1 outline-none px-4"
-                  placeholder="رمز عبور خود را وارد نمایید"
-                  required
-                  type="password"
-                ></input>
-              </div>
+              <Input label={"ایمیل"} name={"email"} placeholder={"ایمیل تان را بنویسید"} type={"email"}/>
+              <Input label={"رمز عبور"} name={"password"} placeholder={"رمز عبور تان را بنویسید"} type={"password"}/>
               <div className="my-2">
                 <label className="text-gray-600 px-2 ">به یاد داشتنن:</label>
                 <input className="outline-none" type="checkbox"></input>
