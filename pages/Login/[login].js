@@ -8,7 +8,7 @@ const Login=()=>{
         <Navbar />
         <div className="w-full  mt-12 grid md:grid-cols-2 justify-center items-center space-x-5">
           <div className="text-start md:px-16 px-5   text-lg ">
-            <form action="">
+            <form onSubmit={handelSubmit}>
               <div className="text-center font-bold text-2xl">
                 <h1>ورود</h1>
               </div>
@@ -37,11 +37,9 @@ const Login=()=>{
                 <input className="outline-none" type="checkbox"></input>
               </div>
               <div className="my-4">
-                <Link href="/send">
                   <button className="block w-full py-2 bg-blue-800 text-white hover:bg-green-300 transition-all hover:text-gray-800 rounded-md">
                     ورود
                   </button>
-                </Link>
               </div>
               <div className="my-4 font-mono text-md  grid md:grid-cols-2 sm:grid-cols-2 justify-between px-3">
                 <div>
@@ -67,6 +65,10 @@ const Login=()=>{
         </div>
       </div>
     );
+   function handelSubmit(e){
+        e.preventDefault();
+        console.log('sunmit');
+    }
 }
 
 export default Login;
