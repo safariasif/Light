@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Navbar from '../components/Navbar/navbar';
-import Meta from '../components/Meta/Meta'
+import Navbar from '../../components/Navbar/navbar'
+import Meta from '../../components/Meta/Meta'
 const Login=()=>{
     return (
       <div>
@@ -53,7 +53,7 @@ const Login=()=>{
                 </div>
                 <div className="lg:pr-24">
                   <span>
-                    <Link href="/regester">
+                    <Link href="/Regester/regester">
                       <a className="hover:text-green-500">ثبت نام؟</a>
                     </Link>
                   </span>

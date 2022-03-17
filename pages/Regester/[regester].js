@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Meta from '../components/Meta/Meta';
-import Navbar from '../components/Navbar/navbar';
+import Meta from '../../components/Meta/Meta';
+import Navbar from '../../components/Navbar/navbar';
 const Regester = () => {
   return (
     <div>
@@ -51,7 +51,7 @@ const Regester = () => {
               ></input>
             </div>
             <div className="my-4">
-              <Link href="/regester">
+              <Link href="/Regester/regester">
                 <button className="block w-full py-2 bg-green-400 text-gray-700 hover:bg-green-300 transition-all hover:text-gray-800 rounded-full shadow-lg">
                   ثبت نام
                 </button>

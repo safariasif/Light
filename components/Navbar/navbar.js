@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link href="/login">
                   <a className="login">ورود</a>
                 </Link>
-                <Link href="/regester">
+                <Link href="/Regester/regester">
                   <a className="hover:text-gray-500 "> / ثبت نام</a>
                 </Link>
               </span>
@@ -87,10 +87,10 @@ const Navbar = () => {
             </span>
 
             <span className="regester btn cursor-pointer hidden lg:block rounded text-center text-blue-800 font-bold px-5 py-2">
-              <Link href="/login">
+              <Link href="/Login/login">
                 <a className="login">ورود</a>
               </Link>
-              <Link href="/regester">
+              <Link href="/Regester/regester">
                 <a className="hover:text-gray-500 "> / ثبت نام</a>
               </Link>
             </span>
