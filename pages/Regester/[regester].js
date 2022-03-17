@@ -13,10 +13,10 @@ const Regester = () => {
               <h1>ثبت نام</h1>
             </div>
             <div className="md:my-2">
-              <label className="text-gray-600 px-2 font-bold">نام:</label>
+              <label className="text-gray-600 px-2 font-bold">نام و نام فامیلی : </label>
               <input
                 className="form-control rounded-full border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg"
-                placeholder="نام خود را وارد نمایید"
+                placeholder="نام و نام فامیلی خود را وارد نمایید"
                 required
                 type="text"
               ></input>
