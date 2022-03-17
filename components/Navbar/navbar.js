@@ -51,7 +51,7 @@ const Navbar = () => {
             </li>
             <span className="regester btn cursor-pointer lg:hidden block grid grid-cols-2 rounded text-center text-blue-800 font-bold px-5  w-full mt-2 justify-around">
               <span className="bg-green-300 py-2 mx-2 rounded-md">
-                <Link href="/login">
+                <Link href="/Login/login">
                   <a className="login">ورود</a>
                 </Link>
                 <Link href="/Regester/regester">
