@@ -7,7 +7,6 @@ const Input =({label,name ,placeholder, type,value,onChange})=>{
         <input
           className="form-control rounded-full border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg"
           placeholder={placeholder}
-          required
           type={type}
           name={name}
           onChange={onChange}
