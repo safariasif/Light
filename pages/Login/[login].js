@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Navbar from '../../components/Navbar/navbar'
+import NotFount from '../404';
 import Meta from '../../components/Meta/Meta'
 import Input from '../Regester/inputRegester';
 import { Component } from 'react';
@@ -13,6 +14,7 @@ class Login extends Component {
       password: '',
     },
     errors: [],
+    sending:false,
   };
   schema = yup.object().shape({
     email: yup
@@ -38,10 +40,22 @@ class Login extends Component {
     const result = await this.validate();
     console.log(result);
     if(result){
-      (result.email == 'mohammdaasifsafari1997@gmail.com' && result.password=='asif'? 
-          alert('wellcome')
-      : alert('your password or email in increecte')); 
+      try{
+        this.setState({sending:true})
+        result.email == 'mohammdaasifsafari1997@gmail.com' &&
+        result.password == 'asif' ? (
+          ''
+        ) : (
+          this.setState({ errors:['ایمیل و یا رمز عبور تان درست نمیباشد' ]})
+        ); 
+        this.setState({sending:false})
+      }
+      catch(error){
+        this.setState({sending:false})
+        this.setState({errors:['ایمیل و یا رمز عبور تان درست نمیباشد']})
+      }
         }
+        
   };
   handelPrees = (e) => {
     const input = e.currentTarget;
@@ -92,7 +106,7 @@ class Login extends Component {
                 <input className="outline-none" type="checkbox"></input>
               </div>
               <div className="my-4">
-                <button className="block w-full py-2 bg-blue-800 text-white hover:bg-green-300 transition-all hover:text-gray-800 rounded-md">
+                <button disabled={this.state.sending} className="block w-full py-2 bg-blue-800 text-white hover:bg-green-300 transition-all hover:text-gray-800 rounded-md">
                   ورود
                 </button>
               </div>
