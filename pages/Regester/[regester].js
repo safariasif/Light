@@ -4,7 +4,6 @@ import Navbar from '../../components/Navbar/navbar';
 import { Component } from 'react';
 import Input from './inputRegester';
 import * as yup from 'yup'
-import { fas } from '@fortawesome/free-solid-svg-icons';
 class Regester extends Component {
   state = {
     account: {
@@ -41,9 +40,15 @@ validate =async ()=>{
   };
   handelSubmit = async (e) => {
     e.preventDefault();
-    const name = e.name;
     const result = await this.validate();
-    console.log(name);
+   try{
+     localStorage.setItem('token',result.name);
+     window.location='/';
+   }
+   catch(error){
+     console.log(error)
+   }
+  
   };
   render() {
     const { name, email, password, repassword } = this.state.account;
