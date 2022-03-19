@@ -1,10 +1,12 @@
 import { Component } from "react";
+import Meta from "../../components/Meta/Meta";
 import Navbar from "../../components/Navbar/navbar";
 
 class Post extends Component{
         render() {
             return (
               <div>
+                <Meta title={'پست ها'}/>
                 <Navbar />
                 <div className="gird">
                   <div className="item-start m-6 grid grid-cols-2 gap-3">
