@@ -12,22 +12,7 @@ import {
 const Slug =()=>{
     const router=useRouter();
     const slug = router.query.slug;
-    /* console.log(router.query.slug); */
     const items = Data.WebBasic.find(a=>a.slug==slug);
-    /* const pp = items.partions.map((p)=>{
-        return p;
-    });
-    console.log(pp);
-    const [numb, part,intr, display] = pp;
-    console.log(numb)
-    console.log(intr);
-    console.log(display);
-    console.log(part);
-    console.log(numb[0]);
-    console.log(numb[1]);
-    console.log(numb[2]);
-    console.log(numb[3]); */
-
 
     if(!items){
         return (
