@@ -30,7 +30,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/posts">
+              <Link href="/Post/post">
                 <a>پست ها</a>
               </Link>
             </li>
@@ -40,7 +40,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/suggest">
+              <Link href="/Suggest/suggest">
                 <a>پشنهادات</a>
               </Link>
             </li>
