@@ -5,9 +5,11 @@ import {
   faAngleDown,
   faCheckCircle
 } from '@fortawesome/free-solid-svg-icons';
+import Meta from '../../components/Meta/Meta';
 const Courses = () => {
   return (
     <div>
+      <Meta title={'دوره های آموزشی'}/>
       <Navbar />
       <div className="container-fluid">
         <div className="row grid md:grid-cols-2 grid-cols-1">
