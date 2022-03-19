@@ -71,27 +71,24 @@ const Slug =()=>{
             <div className="row text-center md:my-12 my-2">
               <h1 className="text-bold text-3xl mb-4 ">قسمت ها</h1>
               <div>
-                 {
-                     items.partions.map((p)=>{
-                         return (
-                           <table key={items.id} className="table w-full">
-                             <tbody>
-                               
-                               <tr className="border grid grid-cols-4 text-center hover:bg-slate-100">
-                                 <td className="py-2">{p[0]}</td>
-                                 <td className="py-2">{p[1]}</td>
-                                 <td className="py-2">{p[2]}</td>
-                                 <Link href="/">
-                                   <td className="py-2 cursor-pointer rounded-md hover:text-green-500  text-center">
-                                     {p[3]}
-                                   </td>
-                                 </Link>
-                               </tr>
-                             </tbody>
-                           </table>
-                         );
-                     })
-                 }
+                {items.partions.map((p) => {
+                  return (
+                    <table key={items.id} className="table w-full">
+                      <tbody>
+                        <tr className="border grid grid-cols-4 text-center hover:bg-slate-100">
+                          <td className="py-2">{p[0]}</td>
+                          <td className="py-2">{p[1]}</td>
+                          <td className="py-2">{p[2]}</td>
+                          <Link href="/">
+                            <td className="py-2 cursor-pointer rounded-md hover:text-green-500  text-center">
+                              {p[3]}
+                            </td>
+                          </Link>
+                        </tr>
+                      </tbody>
+                    </table>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -99,7 +96,7 @@ const Slug =()=>{
             <div className="border px-4 py-2 rounded-md">
               <h1>قیمت</h1>
               <h1>رایگان</h1>
-              <Link href="/regester">
+              <Link href="/Login/login">
                 <button className="bg-green-500 mx-auto w-full py-2 my-2 rounded-md text-white">
                   ثبت نام در دوره
                 </button>

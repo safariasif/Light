@@ -5,8 +5,7 @@ import Meta from '../../components/Meta/Meta'
 import Input from '../Regester/inputRegester';
 import { Component } from 'react';
 import * as yup from 'yup';
-import { Formik } from 'formik';
-import { createRef } from 'react/cjs/react.production.min';
+
 class Login extends Component {
   state = {
     account: {
@@ -42,12 +41,13 @@ class Login extends Component {
     if(result){
       try{
         this.setState({sending:true})
+        const response= e.email == 'mohammdaasifsafari1997@gmail.com'?'ایمیل تان درست نیست':'رمز عبور تان درست نیست';
         result.email == 'mohammdaasifsafari1997@gmail.com' &&
-        result.password == 'asif' ? (
-          ''
-        ) : (
-          this.setState({ errors:['ایمیل و یا رمز عبور تان درست نمیباشد' ]})
-        ); 
+        result.password == 'asif'
+          ? (window.location = '/')
+          : this.setState({
+              errors: [response],
+            }); 
         this.setState({sending:false})
       }
       catch(error){
@@ -55,7 +55,6 @@ class Login extends Component {
         this.setState({errors:['ایمیل و یا رمز عبور تان درست نمیباشد']})
       }
         }
-        
   };
   handelPrees = (e) => {
     const input = e.currentTarget;
@@ -68,7 +67,7 @@ class Login extends Component {
     return (
       <div>
         <Meta title={'ورود'}></Meta>
-        <Navbar/>
+        <Navbar />
         <div className="w-full  mt-12 grid md:grid-cols-2 justify-center items-center space-x-5">
           <div className="text-start md:px-16 px-5   text-lg ">
             {this.state.errors.length !== 0 && (
@@ -77,7 +76,9 @@ class Login extends Component {
                 role="alert"
               >
                 <ul>
-                  {this.state.errors.map((e,index)=><li key={index}>{e}</li>)}
+                  {this.state.errors.map((e, index) => (
+                    <li key={index}>{e}</li>
+                  ))}
                 </ul>
               </div>
             )}
@@ -88,7 +89,6 @@ class Login extends Component {
               <Input
                 label={'ایمیل'}
                 name={'email'}
-                placeholder={'ایمیل تان را بنویسید'}
                 type={'email'}
                 value={email}
                 onChange={this.handelPrees}
@@ -97,7 +97,6 @@ class Login extends Component {
                 label={'رمز عبور'}
                 value={password}
                 name={'password'}
-                placeholder={'رمز عبور تان را بنویسید'}
                 type={'password'}
                 onChange={this.handelPrees}
               />
@@ -106,7 +105,10 @@ class Login extends Component {
                 <input className="outline-none" type="checkbox"></input>
               </div>
               <div className="my-4">
-                <button disabled={this.state.sending} className="block w-full py-2 bg-blue-800 text-white hover:bg-green-300 transition-all hover:text-gray-800 rounded-md">
+                <button
+                  disabled={this.state.sending}
+                  className="block w-full py-2 bg-blue-800 text-white hover:bg-green-300 transition-all hover:text-gray-800 rounded-md"
+                >
                   ورود
                 </button>
               </div>
@@ -114,7 +116,12 @@ class Login extends Component {
                 <div>
                   <span>
                     <Link href="/forget">
-                      <a className="hover:text-green-500">فراموشی رمز عبور؟</a>
+                      <a
+                        disabled={this.state.sending}
+                        className="hover:text-green-500"
+                      >
+                        فراموشی رمز عبور؟
+                      </a>
                     </Link>
                   </span>
                 </div>
