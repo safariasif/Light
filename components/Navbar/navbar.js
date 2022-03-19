@@ -1,7 +1,8 @@
 import Link from 'next/Link';
 import { useState } from 'react';
 import Banner from '../Banner/banner';
-const Navbar = () => {
+const Navbar = ({name}) => {
+  console.log(name)
   const [open, setopen] = useState(false);
   return (
     <div className="mt-4">

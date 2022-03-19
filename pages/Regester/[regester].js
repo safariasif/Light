@@ -11,8 +11,16 @@ class Regester extends Component {
       email: '',
       password: '',
       repassword:'',
+      img:''
     },
     errors: [],
+    data:{
+      name:'',
+      email:'',
+      password:'',
+      repassword:'',
+    }
+
   };
   schema = yup.object().shape({
     name: yup.string().required('پر کردن فیلد نام الزامی میباشد'),
@@ -41,6 +49,12 @@ validate =async ()=>{
   handelSubmit = async (e) => {
     e.preventDefault();
     const result = await this.validate();
+    this.setState({name:result.name,email:result.email,password:result.password,repassword:result.password});
+    console.log(this.state.name);
+    console.log(this.state.email);
+    console.log(this.state.password);
+    console.log(this.state.repassword);
+
    try{
      localStorage.setItem('token',result.name);
      window.location='/';
@@ -55,7 +69,7 @@ validate =async ()=>{
     return (
       <div>
         <Meta title={'ثبت نام'} icon={'/404.svg'}></Meta>
-        <Navbar />
+        <Navbar name={name}/>
         <div className="regetser mt-12 md:flex block justify-center ">
           <div className="text-start md:px-16 px-5   text-lg  md:w-8/12 ">
             {this.state.errors.length !== 0 && (
@@ -148,11 +162,17 @@ validate =async ()=>{
             <h1 className="my-0 py-0 pt-4  text-center">
               انتخاب تصویر دلخواه است
             </h1>
-            <div className="bg-gray-800 grid md:block justify-center md:w-36 md:h-36 w-24 h-24 mt-4 rounded-full items-center"></div>
+            <div className=" grid md:block justify-center md:w-36 md:h-36 w-24 h-24 mt-4 rounded-full items-center">
+              <img
+                src={this.state.img} alt='nothing'
+                className="md:w-36 md:h-36 w-24 h-24"
+              ></img>
+            </div>
             <div className="bg-gray-700 grid  md:block   md:w-20 md:h-20 w-16 h-16 rounded-full  items-center mt-[-30px]   small-circle ">
               <input
                 className="w-10 my-5   w-20 h-36 rounded-full  opacity-0"
                 type="file"
+                onChange={this.UploadImage}
               ></input>
             </div>
             <div className="my-4  mr-0 m-0 flex-wrap">
@@ -164,12 +184,14 @@ validate =async ()=>{
                   email ? email : `« موفقیت شما به نور چراغ افزایش میدهد »`
                 }`}</h1>
               </span>
-              <h1></h1>
             </div>
           </div>
         </div>
       </div>
     );
+  }
+  UploadImage=event=>{
+        this.setState({img:event.target.files[0].name});
   }
 };
 

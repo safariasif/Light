@@ -179,13 +179,18 @@ a {
 .catagory:hover .courses{
   visibility: visible;
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.9ms;
 }
 .courses{
   color: #0021ae;
   opacity: 0;
-  visibility: hidden;
   transition: 0.7s;
+}
+.courses:hover{
+  height: 100%;
+  transition:0.5ms;
+  animation-name: HOVER;
+  animation-duration: 4s
 }
 .courses li{
   border-radius: 5px;
@@ -194,5 +199,17 @@ a {
 .courses li:hover{
   background-color: green;
   color: white;
+}
+
+.catagory1:hover .fa2{
+      opacity: 100;
+      visibility: visible;
+      transition: 0.7s;
+}
+.catagory1 .fa2{
+  visibility: hidden;
+}
+.catagory1:hover .fa1{
+  visibility: hidden;
 }
 /* end of Courses */
