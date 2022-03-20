@@ -18,7 +18,11 @@ import {
   faCubesStacked,
   faWrench,
   faUpload,
-  faFileUpload
+  faFileUpload,
+  faCartPlus,
+faStopCircle,
+faCameraRetro,
+faArrowsRotate
 } from '@fortawesome/free-solid-svg-icons';
 
 const DashBoard = () => {
@@ -163,7 +167,7 @@ const DashBoard = () => {
             </div>
           </div>
           <div className="grid grid-cols-4 gap-4">
-            <div className="viwe bg-gray-100 m-5 p-5 rounded-md">
+            <div className="viwe bg-gray-100 m-5 p-5 rounded-md hover:shadow-xl transition-all">
               <div className="flex justify-between">
                 <div>
                   <h1>کاربران</h1>
@@ -182,89 +186,190 @@ const DashBoard = () => {
               </div>
               <div className="flex justify-between border-t-2 cursor-pointer">
                 <div className="update py-2 items-center">
-                  <FontAwesomeIcon icon={faFileUpload} />
+                  <FontAwesomeIcon icon={faArrowsRotate} />
                 </div>
                 <div className="py-2 items-center">
                   <h1 className="hover:text-green-500">بروز رسانی</h1>
                 </div>
               </div>
             </div>
-            <div className="viwe bg-gray-100 m-5 p-5 rounded-md">
+            <div className="viwe bg-gray-100 m-5 p-5 rounded-md hover:shadow-xl transition-all">
               <div className="flex justify-between">
                 <div>
-                  <h1>کاربران</h1>
+                  <h1 className="hover:text-blue-600">بازدیده کننده</h1>
                 </div>
                 <div>
                   <FontAwesomeIcon
-                    icon={faUsers}
+                    icon={faCameraRetro}
                     className="text-5xl text-teal-300"
                   />
                 </div>
               </div>
               <div>
                 <div>
-                  <h1>۱۰ نفر</h1>
+                  <h1>۱۰۰ نفر</h1>
                 </div>
               </div>
               <div className="flex justify-between border-t-2 cursor-pointer">
                 <div className="update py-2 items-center">
-                  <FontAwesomeIcon icon={faFileUpload} />
+                  <FontAwesomeIcon icon={faArrowsRotate} />
                 </div>
                 <div className="py-2 items-center">
                   <h1 className="hover:text-green-500">بروز رسانی</h1>
                 </div>
               </div>
             </div>
-            <div className="viwe bg-gray-100 m-5 p-5 rounded-md">
+            <div className="viwe bg-gray-100 m-5 p-5 rounded-md hover:shadow-xl transition-all">
               <div className="flex justify-between">
                 <div>
-                  <h1>کاربران</h1>
+                  <h1 className="hover:text-amber-500"> فروش</h1>
                 </div>
                 <div>
                   <FontAwesomeIcon
-                    icon={faUsers}
+                    icon={faCartPlus}
                     className="text-5xl text-teal-300"
                   />
                 </div>
               </div>
               <div>
                 <div>
-                  <h1>۱۰ نفر</h1>
+                  <h1>۱۰۰</h1>
                 </div>
               </div>
               <div className="flex justify-between border-t-2 cursor-pointer">
                 <div className="update py-2 items-center">
-                  <FontAwesomeIcon icon={faFileUpload} />
+                  <FontAwesomeIcon icon={faArrowsRotate} />
                 </div>
                 <div className="py-2 items-center">
                   <h1 className="hover:text-green-500">بروز رسانی</h1>
                 </div>
               </div>
             </div>
-            <div className="viwe bg-gray-100 m-5 p-5 rounded-md">
+            <div className="viwe bg-gray-100 m-5 p-5 rounded-md hover:shadow-xl transition-all">
               <div className="flex justify-between">
                 <div>
-                  <h1>کاربران</h1>
+                  <h1>هزینه</h1>
                 </div>
                 <div>
                   <FontAwesomeIcon
-                    icon={faUsers}
+                    icon={faStopCircle}
                     className="text-5xl text-teal-300"
                   />
                 </div>
               </div>
               <div>
                 <div>
-                  <h1>۱۰ نفر</h1>
+                  <h1>۱۰۰۰ افغانی</h1>
                 </div>
               </div>
               <div className="flex justify-between border-t-2 cursor-pointer">
                 <div className="update py-2 items-center">
-                  <FontAwesomeIcon icon={faFileUpload} />
+                  <FontAwesomeIcon icon={faArrowsRotate} />
                 </div>
                 <div className="py-2 items-center">
                   <h1 className="hover:text-green-500">بروز رسانی</h1>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-3 grid-cols-1 m-0 p-0">
+            <div className="rightsidecourses col-span-2">
+              <div className='text-center my-2 font-mono font-bold'>
+                <h1> کورس های آپلود شده</h1>
+              </div>
+              <div>
+                <table className="cursor-pointer">
+                  <thead>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="my-2">شماره</td>
+                      <td className="my-2">نام کورس</td>
+                      <td className="my-2">قسمت</td>
+                      <td className="my-2">ساعت</td>
+                      <td className="my-2">قیمت</td>
+                      <td className="my-2">تاریخ آپلود</td>
+                      <td className="my-2">وضعیت</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">1</td>
+                      <td className="py-2 font-bold">Html</td>
+                      <td className="py-2 text-gray-500">12</td>
+                      <td className="py-2 text-gray-500">1:50:00</td>
+                      <td className="py-2 text-gray-500">رایگان</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۰۴-۰۱</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">2</td>
+                      <td className="py-2 font-bold">CSS</td>
+                      <td className="py-2 text-gray-500">22</td>
+                      <td className="py-2 text-gray-500">2:30:00</td>
+                      <td className="py-2 text-gray-500">رایگان</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۰۵-۰۱</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">۳</td>
+                      <td className="py-2 font-bold">CSS Grid</td>
+                      <td className="py-2 text-gray-500">8</td>
+                      <td className="py-2 text-gray-500">1:30:00</td>
+                      <td className="py-2 text-gray-500">رایگان</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۰۵-۰۲</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">۴</td>
+                      <td className="py-2 font-bold">Flex Box</td>
+                      <td className="py-2 text-gray-500">10</td>
+                      <td className="py-2 text-gray-500">1:45:00</td>
+                      <td className="py-2 text-gray-500">رایگان</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۰5-۰4</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">۵</td>
+                      <td className="py-2 font-bold">Java Script</td>
+                      <td className="py-2 text-gray-500">26</td>
+                      <td className="py-2 text-gray-500">24:50:00</td>
+                      <td className="py-2 text-gray-500">۱۷۶۰</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۰۶-۰۵</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">۷</td>
+                      <td className="py-2 font-bold">‌Bootstrap</td>
+                      <td className="py-2 text-gray-500">20</td>
+                      <td className="py-2 text-gray-500">6:40:00</td>
+                      <td className="py-2 text-gray-500">رایگان</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۰6-10</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                    <tr className="border grid grid-cols-7 text-center hover:bg-slate-100">
+                      <td className="py-2 text-slate-600">8</td>
+                      <td className="py-2 font-bold">PHP</td>
+                      <td className="py-2 text-gray-500">30</td>
+                      <td className="py-2 text-gray-500">12:50:00</td>
+                      <td className="py-2 text-gray-500">۲۹۰۰</td>
+                      <td className="py-2 text-gray-500">۲۰۲۲-۱۰-۱۱</td>
+                      <td className="py-2 bg-green-700 mx-2 my-1 rounded-sm text-white">
+                        موفق
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
