@@ -245,7 +245,7 @@ const Data = {
       img: '/Web/js.svg',
       time: '2:23:00',
       instructor: 'مهدی متین',
-      description:'جاوا اسکریپت ',
+      description: 'جاوا اسکریپت ',
       price: 'رایگان',
       timeRecord: '03-15-2022',
       viewver: 12,
@@ -286,9 +286,10 @@ const Data = {
       genralName: 'جاوا اسکریپت در مرورگر',
       language: 'فارسی',
       instructor: 'آصف صفری',
-      description:
-        '',
+      description: '',
       price: 'قیمت',
+      value: 1270,
+      rate: 'Afg',
       timeRecord: '03-15-2022',
       viewver: 12,
       like: 13,
@@ -328,7 +329,9 @@ const Data = {
       instructor: 'آصف صفری',
       description:
         'بوت استرپ یکی از فرم ورک های مشهور css میباشد که با استفاده ازین فرم ورک به طراحی صفحات سرعت دو چند میبخشد',
-      price: 'رایگان',
+      price: 'قیمت',
+      value: 1270,
+      rate: 'Afg',
       timeRecord: '03-15-2022',
       viewver: 12,
       like: 13,
@@ -351,7 +354,6 @@ const Data = {
         [13, 'قسمت اول', 'مقدمه', 'نمایش'],
       ],
     },
-    
   ],
 };
 

@@ -209,10 +209,9 @@ const Courses = () => {
                     </div>
                   </Link>
                   <div className="px-3">
-                    <div className="flex my-2 bg-slate-300 py-2 rounded-md px-3  hover:bg-teal-500 transition-all">
-                      <button className="text-gray-700 hover:text-gray-800 ">
-                        {js.price}
-                      </button>
+                    <div className="flex my-2 bg-slate-300 py-2 rounded-md px-3 justify-between  hover:bg-teal-500 transition-all">
+                      <spna>{js.price}</spna>
+                      <spna>{js.value} {js.rate}</spna>
                     </div>
                   </div>
                   <div className="px-3">

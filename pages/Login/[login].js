@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar/navbar'
 import NotFount from '../404';
 import Meta from '../../components/Meta/Meta'
 import Input from '../Regester/inputRegester';
+import DashBoard from '../AdminBord/[dashboard]'
 import { Component } from 'react';
 import * as yup from 'yup';
 
@@ -44,7 +45,7 @@ class Login extends Component {
         const response= e.email == 'mohammdaasifsafari1997@gmail.com'?'ایمیل تان درست نیست':'رمز عبور تان درست نیست';
         result.email == 'mohammdaasifsafari1997@gmail.com' &&
         result.password == 'asif'
-          ? (window.location = '/')
+          ? (window.location = '/AdminBord/dashboard')
           : this.setState({
               errors: [response],
             }); 
