@@ -177,14 +177,14 @@ a {
   }
 }
 .catagory:hover .courses{
-  visibility: visible;
+ /*  visibility: visible;
   opacity: 1;
-  transition: 0.9ms;
+  transition: 0.9ms; */
 }
 .courses{
-  color: #0021ae;
+/*   color: #0021ae;
   opacity: 0;
-  transition: 0.7s;
+  transition: 0.7s; */
 }
 .courses:hover{
   height: 100%;
@@ -211,5 +211,131 @@ a {
 }
 .catagory1:hover .fa1{
   visibility: hidden;
+}
+.all{
+animation-name: all;
+animation-duration: 5s;
+}
+@keyframes all {
+  0%{
+    transform: translateX(-200px);
+  }
+  100%{
+      transform: translateX(0px);
+  }
+}
+.js{
+animation-name: js;
+animation-duration: 5s;
+animation-delay: 1s;
+animation-fill-mode: backwards;
+}
+@keyframes js {
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+.python{
+animation-name: python;
+animation-duration: 7s;
+animation-delay: 1s;
+animation-fill-mode: backwards;
+}
+@keyframes python {
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+    color: #00dfa2;
+  }
+  100%{
+      transform: translateY(0px);
+      opacity: 1;
+      color: black;
+  }
+}
+
+.android{
+animation-name: android;
+animation-duration: 6s;
+animation-delay: 1s;
+animation-fill-mode: both;
+}
+@keyframes android {
+  0%{
+    transform: translateY(-300px);
+    opacity: 0;
+    color: #0021ae;
+  }
+  100%{
+      transform: translateY(0px);
+      color: black;
+      opacity: 1;
+  }
+}
+
+.php{
+animation-name: php;
+animation-duration: 10s;
+animation-delay: 1;
+animation-fill-mode: backwards;
+animation-timing-function: 2s;
+}
+@keyframes php {
+  10%{
+    transform: translateX(50px);
+    opacity: 0;
+    color: aquamarine;
+  }
+  25%{
+    transform: translateY(100px);
+    color: orange;
+    transition: 0.5ms;
+    opacity: 1;
+  }
+  75%{
+    transform: translateX(-200px);
+    color: red;
+  }
+  100%{
+      transform: translateY(0px);
+      color: black;
+  }
+}
+.database{
+animation-name: database;
+animation-duration: 9s;
+}
+@keyframes database {
+  0%{
+    transform: translateX(-150px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
+}
+
+.cryp{
+animation-name: cryp;
+animation-duration: 6s;
+}
+@keyframes cryp {
+  0%{
+    transform: translateY(-150px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  75%{
+      transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
 /* end of Courses */

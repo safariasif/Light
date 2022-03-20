@@ -45,7 +45,7 @@ const Courses = () => {
           </div>
         </div>
         <div className="row grid mainpart mb-4">
-          <ul className="mx-6 md:mr-16 w-4/12 ">
+          <ul className="mx-6 md:mr-16 md:w-4/12 w-full ">
             <li className="px-4 py-1 catagory">
               <div className="flex justify-between border px-2 py-1 rounded-md catagory1">
                 <a className="">دسته بندی</a>
@@ -60,8 +60,8 @@ const Courses = () => {
                   />
                 </div>
               </div>
-              <ul className="mx-3 my-1 courses invisible h-0">
-                <li className="px-4 py-1">
+              <ul className="mx-3 my-1 courses">
+                <li className="px-4 py-1 all">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -72,7 +72,7 @@ const Courses = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="px-4 py-1">
+                <li className="px-4 py-1 js">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -83,7 +83,7 @@ const Courses = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="px-4 py-1">
+                <li className="px-4 py-1 python">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -94,7 +94,7 @@ const Courses = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="px-4 py-1">
+                <li className="px-4 py-1 android">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -105,7 +105,7 @@ const Courses = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="px-4 py-1">
+                <li className="px-4 py-1 php">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -116,7 +116,7 @@ const Courses = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="px-4 py-1">
+                <li className="px-4 py-1 database">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -127,7 +127,7 @@ const Courses = () => {
                     </div>
                   </Link>
                 </li>
-                <li className="px-4 py-1">
+                <li className="px-4 py-1 cryp">
                   <Link href="/">
                     <div>
                       <FontAwesomeIcon
@@ -147,7 +147,7 @@ const Courses = () => {
         <div className='text-center w-full mx-auto'>
           <h1 className='text-2xl font-bold text-gray-700 my-3'>دوره های آموزشی جاوا اسکریپت</h1>
         </div>
-        <div className="grid grid-cols-3 gap-4 mx-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mx-3">
           {Data.javaScript.map((js, index) => {
             return (
               <div
