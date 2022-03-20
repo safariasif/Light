@@ -315,6 +315,13 @@ animation-duration: 9s;
   0%{
     transform: translateX(-150px);
   }
+  50%{
+    transform: translateX(0px);
+  }
+  75%{
+    transform: translateY(-100px);
+    color: violet;
+  }
   100%{
       transform: translateY(0px);
   }
@@ -339,3 +346,21 @@ animation-duration: 6s;
   }
 }
 /* end of Courses */
+
+/* start of dashbord */
+.rightside{
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.mainsection{
+  /* background: #ADA996;  
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  */
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+/* end of dashbord */
