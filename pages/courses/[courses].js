@@ -150,7 +150,7 @@ const Courses = () => {
             </li>
           </ul>
         </div>
-        <div className='text-center w-full mx-auto'>
+       <div className='text-center w-full mx-auto'>
           <h1 className='text-2xl font-bold text-gray-700 my-3'>دوره های آموزشی جاوا اسکریپت</h1>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mx-3">
@@ -285,7 +285,7 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+     <Footer/>
     </div>
   );
    function IncreaseHeart() {

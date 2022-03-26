@@ -176,21 +176,16 @@ a {
     color: green;
   }
 }
-.catagory:hover .courses{
- /*  visibility: visible;
-  opacity: 1;
-  transition: 0.9ms; */
-}
 .courses{
-/*   color: #0021ae;
-  opacity: 0;
-  transition: 0.7s; */
+  display: none; 
+  transition: 5s;
+  height: 100px;
 }
-.courses:hover{
-  height: 100%;
-  transition:0.5ms;
-  animation-name: HOVER;
-  animation-duration: 4s
+
+.catagory:hover .courses{
+  display: block;
+  transition:5s;
+  height: 200px;
 }
 .courses li{
   border-radius: 5px;
@@ -211,139 +206,6 @@ a {
 }
 .catagory1:hover .fa1{
   visibility: hidden;
-}
-.all{
-animation-name: all;
-animation-duration: 5s;
-}
-@keyframes all {
-  0%{
-    transform: translateX(-200px);
-  }
-  100%{
-      transform: translateX(0px);
-  }
-}
-.js{
-animation-name: js;
-animation-duration: 5s;
-animation-delay: 1s;
-animation-fill-mode: backwards;
-}
-@keyframes js {
-  0%{
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100%{
-      transform: translateX(0px);
-      opacity: 1;
-  }
-}
-
-.python{
-animation-name: python;
-animation-duration: 7s;
-animation-delay: 1s;
-animation-fill-mode: backwards;
-}
-@keyframes python {
-  0%{
-    transform: translateY(100px);
-    opacity: 0;
-    color: #00dfa2;
-  }
-  100%{
-      transform: translateY(0px);
-      opacity: 1;
-      color: black;
-  }
-}
-
-.android{
-animation-name: android;
-animation-duration: 6s;
-animation-delay: 1s;
-animation-fill-mode: both;
-}
-@keyframes android {
-  0%{
-    transform: translateY(-300px);
-    opacity: 0;
-    color: #0021ae;
-  }
-  100%{
-      transform: translateY(0px);
-      color: black;
-      opacity: 1;
-  }
-}
-
-.php{
-animation-name: php;
-animation-duration: 10s;
-animation-delay: 1;
-animation-fill-mode: backwards;
-animation-timing-function: 2s;
-}
-@keyframes php {
-  10%{
-    transform: translateX(50px);
-    opacity: 0;
-    color: aquamarine;
-  }
-  25%{
-    transform: translateY(100px);
-    color: orange;
-    transition: 0.5ms;
-    opacity: 1;
-  }
-  75%{
-    transform: translateX(-200px);
-    color: red;
-  }
-  100%{
-      transform: translateY(0px);
-      color: black;
-  }
-}
-.database{
-animation-name: database;
-animation-duration: 9s;
-}
-@keyframes database {
-  0%{
-    transform: translateX(-150px);
-  }
-  50%{
-    transform: translateX(0px);
-  }
-  75%{
-    transform: translateY(-100px);
-    color: violet;
-  }
-  100%{
-      transform: translateY(0px);
-  }
-}
-
-.cryp{
-animation-name: cryp;
-animation-duration: 6s;
-}
-@keyframes cryp {
-  0%{
-    transform: translateY(-150px);
-  }
-  50%{
-    transform: translateY(0);
-  }
-  75%{
-      transform: translateY(100px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
 }
 
 /* .extends-btn{
