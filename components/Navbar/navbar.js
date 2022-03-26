@@ -37,9 +37,7 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/telegram">
-                <a>کانال تلگرام</a>
-              </Link>
+                <a href="https://t.me/+LT-2wX3JDX4zMWQ9">کانال تلگرام</a>
             </li>
             <li className="items">
               <Link href="/Suggest/suggest">
