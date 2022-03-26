@@ -27,8 +27,8 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/new">
-                <a>جدید ترن ها</a>
+              <Link href="/NewCourses/newcourses">
+                <a>جدید ترین ها</a>
               </Link>
             </li>
             <li className="items">
@@ -37,7 +37,7 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               </Link>
             </li>
             <li className="items">
-                <a href="https://t.me/+LT-2wX3JDX4zMWQ9">کانال تلگرام</a>
+              <a href="https://t.me/+LT-2wX3JDX4zMWQ9">کانال تلگرام</a>
             </li>
             <li className="items">
               <Link href="/Suggest/suggest">

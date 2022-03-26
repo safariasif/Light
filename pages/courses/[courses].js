@@ -11,13 +11,19 @@ import {
   faComment,
   faAnglesUp,
   faStar,
+  faMarker,
+  faShoppingCart,
+  faDownload,
+  faCloudArrowDown,
+  faDownLeftAndUpRightToCenter,
+  faFileDownload,
+  faVideoSlash,
+  faEye,
 } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../../components/Meta/Meta';
 import Data from '../../components/Courses/data';
 const Courses = () => {
-   const [like, setLike] = useState(1);
    const [heart, setHeart] = useState(3);
-   const [comment, setComment] = useState(2);
   return (
     <div>
       <Meta title={'دوره های آموزشی'} />
@@ -208,61 +214,66 @@ const Courses = () => {
                       </div>
                     </div>
                   </Link>
-                  <div className="px-3">
-                    <div className="flex my-2 bg-slate-300 py-2 rounded-md px-3 justify-between  hover:bg-teal-500 transition-all">
-                      <spna>{js.price}</spna>
-                      <spna>{js.value} {js.rate}</spna>
+                  {js.price > 0 ? (
+                    <div className="buttons flex justify-between align-center px-3 py-2">
+                      <div className="right">
+                        <span className="hover:text-blue-500">
+                          قیمت :{' '}
+                          <span>{js.price > 0 ? js.price : 'رایگان'}</span>
+                          <span>{js.price > 0 ? js.rate : ''}</span>
+                        </span>
+                      </div>
+                      <div className="left flex">
+                        <div className="extends-btn" onClick={IncreaseHeart}>
+                          <a className="b-text" href="/">
+                            علاقه
+                            <span className="px-1">{heart}</span>
+                          </a>
+                          <FontAwesomeIcon className="b-icon" icon={faHeart} />
+                        </div>
+                        <Link href="/Buying/buy">
+                          <div className="extends-btn">
+                            <a className="b-text" href="/">
+                              خرید
+                            </a>
+                            <FontAwesomeIcon
+                              className="b-icon"
+                              icon={faCloudArrowDown}
+                            />
+                          </div>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                  <div className="px-3">
-                    <div className="flex justify-around border border-t-2 text-sm border-b-2 border-r-0 border-l-0 my-2 py-1 text-center rounded-md">
-                      <p className="text-center items-center">
-                        <span className="px-2 py-0 rounded-full bg-green-500 text-white text-sm mx-2">
-                          {comment}
+                  ) : (
+                    <div className="buttons flex justify-between align-center px-3 py-2">
+                      <div className="right">
+                        <span className="hover:text-blue-500">
+                          قیمت :{' '}
+                          <span>{js.price > 0 ? js.price : 'رایگان'}</span>
+                          <span>{js.price > 0 ? js.rate : ''}</span>
                         </span>
-                        <span
-                          className="text-gray-700 hover:text-gray-500 "
-                          onClick={IncreasComment}
-                        >
+                      </div>
+                      <div className="left flex">
+                        <div className="extends-btn" onClick={IncreaseHeart}>
+                          <a className="b-text" href="/">
+                            علاقه
+                            <span className="px-1">{heart}</span>
+                          </a>
+
+                          <FontAwesomeIcon className="b-icon" icon={faHeart} />
+                        </div>
+                        <div className="extends-btn">
+                          <a className="b-text" href="/">
+                            نمایش
+                          </a>
                           <FontAwesomeIcon
-                            icon={faComment}
-                            style={{ fontSize: 17 }}
-                            className="mt-1"
+                            className="b-icon"
+                            icon={faEye}
                           />
-                        </span>
-                      </p>
-                      <p>
-                        <span className="px-2 py-0 rounded-full bg-red-500 text-white mx-2 text-sm">
-                          {heart}
-                        </span>
-                        <span
-                          className="text-red-600 hover:text-red-400"
-                          onClick={IncreaseHeart}
-                        >
-                          <FontAwesomeIcon
-                            icon={faHeart}
-                            style={{ fontSize: 17 }}
-                            className="mt-1"
-                          />
-                        </span>
-                      </p>
-                      <p>
-                        <span className="px-2 py-0 rounded-full bg-blue-500 text-white mx-2 text-sm">
-                          {like}
-                        </span>
-                        <span
-                          className="hover:text-blue-400 text-blue-600 transition-all"
-                          onClick={IncreaseLike}
-                        >
-                          <FontAwesomeIcon
-                            icon={faThumbsUp}
-                            style={{ fontSize: 17 }}
-                            className="mt-1"
-                          />
-                        </span>
-                      </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             );
@@ -277,17 +288,9 @@ const Courses = () => {
       <Footer/>
     </div>
   );
-   function IncreaseLike() {
-     setLike(like + 1);
-     console.log(like);
-   }
    function IncreaseHeart() {
      setHeart(heart + 1);
      console.log(heart);
-   }
-   function IncreasComment() {
-     setComment(comment + 1);
-     console.log(comment);
    }
 };
 

@@ -49,11 +49,11 @@ validate =async ()=>{
   handelSubmit = async (e) => {
     e.preventDefault();
     const result = await this.validate();
-    this.setState({name:result.name,email:result.email,password:result.password,repassword:result.password});
+    /* this.setState({name:result.name,email:result.email,password:result.password,repassword:result.password});
     console.log(this.state.name);
     console.log(this.state.email);
     console.log(this.state.password);
-    console.log(this.state.repassword);
+    console.log(this.state.repassword); */
 
    try{
      localStorage.setItem('token',result.name);

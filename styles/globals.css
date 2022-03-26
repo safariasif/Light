@@ -345,6 +345,35 @@ animation-duration: 6s;
     transform: translateY(0px);
   }
 }
+
+/* .extends-btn{
+  @apply flex justify-between items-center ml-5 w-8 h-6 bg-green-600 px-2 py-1 rounded-full cursor-pointer  text-white;
+} */
+.extends-btn{
+  transition: .75s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4px;
+  width: 35px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 4px 10px;
+  align-items: center;
+}
+.extends-btn:hover{
+  width: 100px;
+}
+.b-text{
+  display: none;
+  color: white;
+}
+.extends-btn:hover .b-text{
+display: block;
+}
 /* end of Courses */
 
 /* start of dashbord */
@@ -365,3 +394,25 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 }
 
 /* end of dashbord */
+
+/* start of newCourses section */
+.newcourses{
+  animation-name: zero;
+  animation-duration: 5s;
+}
+@keyframes zero {
+  0%{
+    color: #00dfa2;
+  }
+  30%{
+    color: #0021ae;
+  }
+  60%{
+    color: blueviolet;
+  }
+  100%{
+    color: black;
+  }
+  
+}
+/* end of newCourses section */
