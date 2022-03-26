@@ -1,3 +1,5 @@
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/Link';
 import { useState } from 'react';
 import Banner from '../Banner/banner';
@@ -42,6 +44,11 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
             <li className="items">
               <Link href="/Suggest/suggest">
                 <a>پشنهادات</a>
+              </Link>
+            </li>
+            <li className="items">
+              <Link href="/About/about">
+                <a> حمایت از چراغ <span><FontAwesomeIcon  icon={faHeart} style={{color:"red"}}/></span></a>
               </Link>
             </li>
             <li className="items">
