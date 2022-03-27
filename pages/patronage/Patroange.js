@@ -31,40 +31,43 @@ const Parotange=()=>{
               شویم "
             </p>
           </div>
-          <div className="items-center md:w-6/12 w-10/12 mx-auto my-5 bg-transparent border rounded-2xl shadow-xl md:p-5 p-2">
-            <Input
-              name={'name'}
-              label={'نام / تخلص'}
-              placeholder={'اختیاری'}
-              type={'text'}
-            />
-            <Input
-              name={'email'}
-              label={' ایمیل'}
-              placeholder={'اختیاری'}
-              type={'email'}
-            />
-            <Input
-              name={'say'}
-              label={' می خواهی چیزی بگویی ؟'}
-              placeholder={'اختیاری'}
-              type={'text'}
-            />
-            <Input
-              name={'Payement'}
-              label={' مبلغ پرداختی ؟  (به افغانی)'}
-              placeholder={'چی قدر میخواهی بپردازی ؟'}
-              type={'text'}
-            />
-          </div>
-          <div className="items-center md:w-6/12 w-10/12 mx-auto text-center ">
-            <Link href="/">
-              <button className="bg-fuchsia-700 text-white rounded-md w-full py-2 my-2 hover:bg-pink-900">
-                ادامه
-                <FontAwesomeIcon icon={faArrowLeftRotate} className="px-2" />
-              </button>
-            </Link>
-          </div>
+          <form>
+            <div className="items-center md:w-6/12 w-10/12 mx-auto my-5 bg-transparent border rounded-2xl shadow-xl md:p-5 p-2">
+              <Input
+                name={'name'}
+                label={'نام / تخلص'}
+                placeholder={'اختیاری'}
+                type={'text'}
+              />
+              <Input
+                name={'email'}
+                label={' ایمیل'}
+                placeholder={'اختیاری'}
+                type={'email'}
+              />
+              <Input
+                name={'say'}
+                label={' می خواهی چیزی بگویی ؟'}
+                placeholder={'اختیاری'}
+                type={'text'}
+              />
+              <Input
+                name={'Payement'}
+                label={' مبلغ پرداختی ؟  (به افغانی)'}
+                placeholder={'چی قدر میخواهی بپردازی ؟'}
+                type={'text'}
+              />
+            </div>
+            <div className="items-center md:w-6/12 w-10/12 mx-auto text-center ">
+              <Link href="/patronage/payment">
+                <button className="bg-fuchsia-700 text-white rounded-md w-full py-2 my-2 hover:bg-pink-900">
+                  ادامه
+                  <FontAwesomeIcon icon={faArrowLeftRotate} className="px-2" />
+                </button>
+              </Link>
+            </div>
+          </form>
+
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
