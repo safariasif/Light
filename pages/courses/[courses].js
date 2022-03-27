@@ -1,8 +1,8 @@
 import Navbar from '../../components/Navbar/navbar';
-import Link from 'next/link'
+import Link from 'next/link';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Footer from '../../components/Footer/footer'
+import Footer from '../../components/Footer/footer';
 import {
   faAngleDown,
   faCheckCircle,
@@ -19,11 +19,13 @@ import {
   faFileDownload,
   faVideoSlash,
   faEye,
+  faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../../components/Meta/Meta';
 import Data from '../../components/Courses/data';
+import Input from '../Regester/inputRegester';
 const Courses = () => {
-   const [heart, setHeart] = useState(3);
+  const [heart, setHeart] = useState(3);
   return (
     <div>
       <Meta title={'دوره های آموزشی'} />
@@ -150,8 +152,10 @@ const Courses = () => {
             </li>
           </ul>
         </div>
-       <div className='text-center w-full mx-auto'>
-          <h1 className='text-2xl font-bold text-gray-700 my-3'>دوره های آموزشی جاوا اسکریپت</h1>
+        <div className="text-center w-full mx-auto">
+          <h1 className="text-2xl font-bold text-gray-700 my-3">
+            دوره های آموزشی جاوا اسکریپت
+          </h1>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mx-3">
           {Data.javaScript.map((js, index) => {
@@ -215,33 +219,40 @@ const Courses = () => {
                     </div>
                   </Link>
                   {js.price > 0 ? (
-                    <div className="buttons flex justify-between align-center px-3 py-2">
-                      <div className="right">
-                        <span className="hover:text-blue-500">
-                          قیمت :{' '}
-                          <span>{js.price > 0 ? js.price : 'رایگان'}</span>
-                          <span>{js.price > 0 ? js.rate : ''}</span>
-                        </span>
-                      </div>
-                      <div className="left flex">
-                        <div className="extends-btn" onClick={IncreaseHeart}>
-                          <a className="b-text" href="/">
-                            علاقه
-                            <span className="px-1">{heart}</span>
-                          </a>
-                          <FontAwesomeIcon className="b-icon" icon={faHeart} />
+                    <div>
+                      <div className="buttons flex justify-between align-center px-3 py-2">
+                        <div className="right">
+                          <span className="hover:text-blue-500">
+                            قیمت :{' '}
+                            <span>{js.price > 0 ? js.price : 'رایگان'}</span>
+                            <span>{js.price > 0 ? js.rate : ''}</span>
+                          </span>
                         </div>
-                        <Link href="/Buying/buy">
-                          <div className="extends-btn">
+                        <div className="left flex">
+                          <div className="extends-btn" onClick={IncreaseHeart}>
                             <a className="b-text" href="/">
-                              خرید
+                              علاقه
+                              <span className="px-1">{heart}</span>
                             </a>
+                            <FontAwesomeIcon
+                              className="b-icon"
+                              icon={faHeart}
+                            />
+                          </div>
+                          <div
+                            className="extends-btn"
+                            id="open-button"
+                            onClick={Modal}
+                          >
+                            <span className="b-text" href="/">
+                              خرید
+                            </span>
                             <FontAwesomeIcon
                               className="b-icon"
                               icon={faCloudArrowDown}
                             />
                           </div>
-                        </Link>
+                        </div>
                       </div>
                     </div>
                   ) : (
@@ -266,10 +277,7 @@ const Courses = () => {
                           <a className="b-text" href="/">
                             نمایش
                           </a>
-                          <FontAwesomeIcon
-                            className="b-icon"
-                            icon={faEye}
-                          />
+                          <FontAwesomeIcon className="b-icon" icon={faEye} />
                         </div>
                       </div>
                     </div>
@@ -279,19 +287,83 @@ const Courses = () => {
             );
           })}
         </div>
-        <div className='my-3'>
-          <div className='text-center bg-blue-50 py-5'>
-            <h1 className='text-2xl'>سیر تا پیاز  پایتون و آندروید</h1>
+        <div className="my-3">
+          <div className="text-center bg-blue-50 py-5">
+            <h1 className="text-2xl">سیر تا پیاز پایتون و آندروید</h1>
           </div>
         </div>
       </div>
-     <Footer/>
+      <div
+        className="opacity-90 inset-0 hidden  justify-center items-center h-fit"
+        id="open-modal"
+        style={{ position: 'absolute', top: '90%' }}
+      >
+        <div className="bg-gray-400 md:w-6/12 w-10/12 shadow-lg border rounded-md">
+          <form className="">
+            <div className="px-6">
+              <div className="text-center my-5 flex justify-between">
+                <h1>برای ورود فرم زیل را پر کیند</h1>
+                <FontAwesomeIcon className='cursor-pointer hover:text-red-500' icon={faClose} onClick={HideModal} />
+              </div>
+              <div>
+                <h1>
+                  اگر قبلا در وبسایت آموزشی چراغ ثبت نام ننموده اید خواهیش میکنم
+                  در قدم نخست ثبت نام نماید
+                </h1>
+                <Link href="/Regester/regester">
+                  <a>
+                    لینک <span className='text-blue-700 hover:text-blue-500'>ثبت نام ...</span>
+                  </a>
+                </Link>
+              </div>
+              <Input
+                name={'email'}
+                placeholder={'email'}
+                label={'ایمیل'}
+                type={'email'}
+              />
+              <Input
+                name={'password'}
+                placeholder={'password'}
+                label={'رمز عبور'}
+                type={'password'}
+              />
+            </div>
+            <div className="flex justify-evenly my-2">
+              <Link href="/Buying/buy">
+                <button className="bg-green-400 px-10 rounded-sm  py-1 hover:bg-pink-500 transition-all hover:text-white">
+                  ورود
+                </button>
+              </Link>
+              <Link href="/courses/courses">
+                <button className="bg-yellow-400 px-6 rounded-sm  py-1 hover:bg-yellow-200 hover:text-red-500">
+                  برگشت
+                </button>
+              </Link>
+            </div>
+          </form>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
-   function IncreaseHeart() {
-     setHeart(heart + 1);
-     console.log(heart);
-   }
+
+  function IncreaseHeart() {
+    setHeart(heart + 1);
+    console.log(heart);
+  }
+  function Modal() {
+    const btnmodal = document.querySelector('#open-button');
+    const openmodal = document.querySelector('#open-modal');
+    openmodal.classList.remove('hidden');
+    openmodal.classList.add('flex');
+  }
+  function HideModal() {
+    const btnmodal = document.querySelector('#open-button');
+    const openmodal = document.querySelector('#open-modal');
+    openmodal.classList.remove('flex');
+    openmodal.classList.add('hidden');
+  }
 };
 
 export default Courses;
