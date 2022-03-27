@@ -298,12 +298,16 @@ const Courses = () => {
         id="open-modal"
         style={{ position: 'absolute', top: '90%' }}
       >
-        <div className="bg-gray-400 md:w-6/12 w-10/12 shadow-lg border rounded-md">
+        <div className="bg-slate-200 md:w-6/12 w-10/12 shadow-xl border rounded-lg ">
           <form className="">
             <div className="px-6">
               <div className="text-center my-5 flex justify-between">
                 <h1>برای ورود فرم زیل را پر کیند</h1>
-                <FontAwesomeIcon className='cursor-pointer hover:text-red-500' icon={faClose} onClick={HideModal} />
+                <FontAwesomeIcon
+                  className="cursor-pointer hover:text-red-500"
+                  icon={faClose}
+                  onClick={HideModal}
+                />
               </div>
               <div>
                 <h1>
@@ -312,7 +316,10 @@ const Courses = () => {
                 </h1>
                 <Link href="/Regester/regester">
                   <a>
-                    لینک <span className='text-blue-700 hover:text-blue-500'>ثبت نام ...</span>
+                    لینک{' '}
+                    <span className="text-blue-700 hover:text-blue-500">
+                      ثبت نام ...
+                    </span>
                   </a>
                 </Link>
               </div>
