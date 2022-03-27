@@ -47,8 +47,14 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/About/about">
-                <a> حمایت از چراغ <span><FontAwesomeIcon  icon={faHeart} style={{color:"red"}}/></span></a>
+              <Link href="/patronage/Patroange">
+                <a>
+                  {' '}
+                  حمایت از چراغ{' '}
+                  <span>
+                    <FontAwesomeIcon icon={faHeart} style={{ color: 'red' }} />
+                  </span>
+                </a>
               </Link>
             </li>
             <li className="items">

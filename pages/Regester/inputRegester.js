@@ -12,7 +12,7 @@ const Input = ({
       <label htmlFor={name} className="text-gray-600 px-2 font-bold">
         {label}
       </label>
-      <input style={{direction:"ltr"}}
+      <input style={{direction:"center"}}
         className="form-control rounded-full border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg"
         placeholder={placeholder}
         type={type}
