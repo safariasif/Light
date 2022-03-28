@@ -28,10 +28,10 @@ const Courses = () => {
   const [heart, setHeart] = useState(3);
   const [showModal, setShowModal] = useState(false);
   return (
-    <div>
+    <div className=" m-0 p-0 ">
       <Meta title={'دوره های آموزشی'} />
       <Navbar />
-      <div className="container-fluid">
+      <div className="container-fluid m-0 p-0 items-center mx-4">
         <div className="row grid md:grid-cols-2 grid-cols-1">
           <div className="text-center lg:mt-28 md:mt-12 mt-8">
             <div className="headerCourse">
@@ -53,10 +53,10 @@ const Courses = () => {
             <img src="/learning.svg" className="w-8/12 mx-auto"></img>
           </div>
         </div>
-        <div className="row grid mainpart mb-4">
-          <ul className="mx-6 md:mr-16 md:w-4/12 w-full ">
-            <li className="px-4 py-1 catagory">
-              <div className="flex justify-between border px-2 py-1 rounded-md catagory1">
+        <div className="row grid mainpart mb-4 ">
+          <ul className="md:w-4/12 w-full ">
+            <li className=" py-1 catagory">
+              <div className="flex justify-between border  py-1 rounded-md catagory1">
                 <a className="">دسته بندی</a>
                 <div>
                   <FontAwesomeIcon
@@ -69,7 +69,7 @@ const Courses = () => {
                   />
                 </div>
               </div>
-              <ul className="mx-3 my-1 courses">
+              <ul className=" my-1 courses">
                 <li className="px-4 py-1 all">
                   <Link href="/">
                     <div>
@@ -158,12 +158,12 @@ const Courses = () => {
             دوره های آموزشی جاوا اسکریپت
           </h1>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mx-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-4">
           {Data.javaScript.map((js, index) => {
             return (
               <div
                 key={index}
-                className="space-x-2 md:space-x-4 border border-2  rounded-xl cursor-pointer"
+                className="border border-2 rounded-xl cursor-pointer"
               >
                 <div className="bg-gray-100">
                   <Link href={`/WebBasic/${js.slug}`} key={index}>
@@ -257,10 +257,10 @@ const Courses = () => {
                           {showModal ? (
                             <>
                               <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-                                <div className="relative  my-6 md:mx-auto sm:w-8/12 w-full mx-2">
+                                <div className="relative  my-6 mx-auto sm:w-8/12 w-full">
                                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                     <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
-                                      <h3 className="text-xl font=semibold">
+                                      <h3 className="text-xl font-semibold">
                                         برای ورود به صفحه پرداختی ایمیل و رمز
                                         عبور تان را وارد کیند
                                       </h3>
