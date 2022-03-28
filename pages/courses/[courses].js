@@ -26,6 +26,7 @@ import Data from '../../components/Courses/data';
 import Input from '../Regester/inputRegester';
 const Courses = () => {
   const [heart, setHeart] = useState(3);
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
       <Meta title={'دوره های آموزشی'} />
@@ -242,7 +243,7 @@ const Courses = () => {
                           <div
                             className="extends-btn"
                             id="open-button"
-                            onClick={Modal}
+                            onClick={() => setShowModal(true)}
                           >
                             <span className="b-text" href="/">
                               خرید
@@ -252,6 +253,69 @@ const Courses = () => {
                               icon={faCloudArrowDown}
                             />
                           </div>
+
+                          {showModal ? (
+                            <>
+                              <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                                <div className="relative  my-6 md:mx-auto sm:w-8/12 w-full mx-2">
+                                  <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                                    <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
+                                      <h3 className="text-xl font=semibold">
+                                        برای ورود به صفحه پرداختی ایمیل و رمز
+                                        عبور تان را وارد کیند
+                                      </h3>
+                                      <button
+                                        className="bg-transparent border-0 text-black float-right"
+                                        onClick={() => setShowModal(false)}
+                                      >
+                                        <span className="text-black opacity-7 h-6 w-6 text-xl block bg-gray-400 py-0 rounded-full">
+                                          x
+                                        </span>
+                                      </button>
+                                    </div>
+                                    <div className="relative p-6 flex-auto">
+                                      <form className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full">
+                                        <label className="block text-black text-sm font-bold mb-1">
+                                          ایمیل :
+                                        </label>
+                                        <input
+                                          type={'email'}
+                                          name="email"
+                                          className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
+                                        />
+                                        <label className="block text-black text-sm font-bold mb-1">
+                                          رمز عبور :
+                                        </label>
+                                        <input
+                                          type={'password'}
+                                          name="password"
+                                          className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
+                                        />
+                                      </form>
+                                    </div>
+                                    <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                      <Link href="/Buying/buy">
+                                        <button
+                                          className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                                          type="button"
+                                          onClick={() => setShowModal(false)}
+                                        >
+                                          ورود
+                                        </button>
+                                      </Link>
+                                      <button
+                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
+                                        type="button"
+                                        onClick={() => setShowModal(false)}
+                                      >
+                                        بستن
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          ) : null}
                         </div>
                       </div>
                     </div>
@@ -286,6 +350,63 @@ const Courses = () => {
               </div>
             );
           })}
+          <div
+            className="opacity-90 inset-0 hidden  justify-center items-center h-fit"
+            id="open-modal"
+            style={{ position: 'absolute', top: '90%' }}
+          >
+            <div className="bg-slate-200 md:w-6/12 w-10/12 shadow-xl border rounded-lg ">
+              <form className="">
+                <div className="px-6">
+                  <div className="text-center my-5 flex justify-between">
+                    <h1>برای ورود فرم زیل را پر کیند</h1>
+                    <FontAwesomeIcon
+                      className="cursor-pointer hover:text-red-500"
+                      icon={faClose}
+                    />
+                  </div>
+                  <div>
+                    <h1>
+                      اگر قبلا در وبسایت آموزشی چراغ ثبت نام ننموده اید خواهیش
+                      میکنم در قدم نخست ثبت نام نماید
+                    </h1>
+                    <Link href="/Regester/regester">
+                      <a>
+                        لینک{' '}
+                        <span className="text-blue-700 hover:text-blue-500">
+                          ثبت نام ...
+                        </span>
+                      </a>
+                    </Link>
+                  </div>
+                  <Input
+                    name={'email'}
+                    placeholder={'email'}
+                    label={'ایمیل'}
+                    type={'email'}
+                  />
+                  <Input
+                    name={'password'}
+                    placeholder={'password'}
+                    label={'رمز عبور'}
+                    type={'password'}
+                  />
+                </div>
+                <div className="flex justify-evenly my-2">
+                  <Link href="/Buying/buy">
+                    <button className="bg-green-400 px-10 rounded-sm  py-1 hover:bg-pink-500 transition-all hover:text-white">
+                      ورود
+                    </button>
+                  </Link>
+                  <Link href="/courses/courses">
+                    <button className="bg-yellow-400 px-6 rounded-sm  py-1 hover:bg-yellow-200 hover:text-red-500">
+                      برگشت
+                    </button>
+                  </Link>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <div className="my-3">
           <div className="text-center bg-blue-50 py-5">
@@ -293,84 +414,15 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div
-        className="opacity-90 inset-0 hidden  justify-center items-center h-fit"
-        id="open-modal"
-        style={{ position: 'absolute', top: '90%' }}
-      >
-        <div className="bg-slate-200 md:w-6/12 w-10/12 shadow-xl border rounded-lg ">
-          <form className="">
-            <div className="px-6">
-              <div className="text-center my-5 flex justify-between">
-                <h1>برای ورود فرم زیل را پر کیند</h1>
-                <FontAwesomeIcon
-                  className="cursor-pointer hover:text-red-500"
-                  icon={faClose}
-                  onClick={HideModal}
-                />
-              </div>
-              <div>
-                <h1>
-                  اگر قبلا در وبسایت آموزشی چراغ ثبت نام ننموده اید خواهیش میکنم
-                  در قدم نخست ثبت نام نماید
-                </h1>
-                <Link href="/Regester/regester">
-                  <a>
-                    لینک{' '}
-                    <span className="text-blue-700 hover:text-blue-500">
-                      ثبت نام ...
-                    </span>
-                  </a>
-                </Link>
-              </div>
-              <Input
-                name={'email'}
-                placeholder={'email'}
-                label={'ایمیل'}
-                type={'email'}
-              />
-              <Input
-                name={'password'}
-                placeholder={'password'}
-                label={'رمز عبور'}
-                type={'password'}
-              />
-            </div>
-            <div className="flex justify-evenly my-2">
-              <Link href="/Buying/buy">
-                <button className="bg-green-400 px-10 rounded-sm  py-1 hover:bg-pink-500 transition-all hover:text-white">
-                  ورود
-                </button>
-              </Link>
-              <Link href="/courses/courses">
-                <button className="bg-yellow-400 px-6 rounded-sm  py-1 hover:bg-yellow-200 hover:text-red-500">
-                  برگشت
-                </button>
-              </Link>
-            </div>
-          </form>
-        </div>
-      </div>
+
       <Footer />
     </div>
   );
 
   function IncreaseHeart() {
     setHeart(heart + 1);
-    console.log(heart);
   }
-  function Modal() {
-    const btnmodal = document.querySelector('#open-button');
-    const openmodal = document.querySelector('#open-modal');
-    openmodal.classList.remove('hidden');
-    openmodal.classList.add('flex');
-  }
-  function HideModal() {
-    const btnmodal = document.querySelector('#open-button');
-    const openmodal = document.querySelector('#open-modal');
-    openmodal.classList.remove('flex');
-    openmodal.classList.add('hidden');
-  }
+  
 };
 
 export default Courses;

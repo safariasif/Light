@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight, faArrowCircleLeft, faArrowLeftLong, faArrowLeftRotate, faArrowRight, faHeart } from "@fortawesome/free-solid-svg-icons";
 import Input from "../Regester/inputRegester";
 import Link from 'next/link'
+import { useState } from "react";
+
 
 const Parotange=()=>{
+  const [pay,setpay]=useState();
     return (
       <div>
         <Meta title={'حمایت از چراغ'} />
@@ -59,12 +62,13 @@ const Parotange=()=>{
               />
             </div>
             <div className="items-center md:w-6/12 w-10/12 mx-auto text-center ">
-              <Link href="/patronage/payment">
-                <button className="bg-fuchsia-700 text-white rounded-md w-full py-2 my-2 hover:bg-pink-900">
-                  ادامه
-                  <FontAwesomeIcon icon={faArrowLeftRotate} className="px-2" />
-                </button>
-              </Link>
+              <button
+                className="bg-fuchsia-700 text-white rounded-md w-full py-2 my-2 hover:bg-pink-900"
+                onClick={Payement}
+              >
+                ادامه
+                <FontAwesomeIcon icon={faArrowLeftRotate} className="px-2" />
+              </button>
             </div>
           </form>
 
@@ -88,6 +92,11 @@ const Parotange=()=>{
         </div>
       </div>
     );
+    function Payement(e){
+      
+      e.preventDefault();
+      location.replace('/patronage/payment');
+    }
 }
 
 export default Parotange;
