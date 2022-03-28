@@ -23,6 +23,7 @@ render() {
                 typeof="textarea"
                 className="border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg rounded-md"
                 rows={6}
+                placeholder={'نظریه و پشنهادات خود را اینجا بنویسید'}
               ></textarea>
             </div>
             <div className="my-4 md:w-8/12 w-10/12 mx-auto">
