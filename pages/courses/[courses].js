@@ -350,63 +350,6 @@ const Courses = () => {
               </div>
             );
           })}
-          <div
-            className="opacity-90 inset-0 hidden  justify-center items-center h-fit"
-            id="open-modal"
-            style={{ position: 'absolute', top: '90%' }}
-          >
-            <div className="bg-slate-200 md:w-6/12 w-10/12 shadow-xl border rounded-lg ">
-              <form className="">
-                <div className="px-6">
-                  <div className="text-center my-5 flex justify-between">
-                    <h1>برای ورود فرم زیل را پر کیند</h1>
-                    <FontAwesomeIcon
-                      className="cursor-pointer hover:text-red-500"
-                      icon={faClose}
-                    />
-                  </div>
-                  <div>
-                    <h1>
-                      اگر قبلا در وبسایت آموزشی چراغ ثبت نام ننموده اید خواهیش
-                      میکنم در قدم نخست ثبت نام نماید
-                    </h1>
-                    <Link href="/Regester/regester">
-                      <a>
-                        لینک{' '}
-                        <span className="text-blue-700 hover:text-blue-500">
-                          ثبت نام ...
-                        </span>
-                      </a>
-                    </Link>
-                  </div>
-                  <Input
-                    name={'email'}
-                    placeholder={'email'}
-                    label={'ایمیل'}
-                    type={'email'}
-                  />
-                  <Input
-                    name={'password'}
-                    placeholder={'password'}
-                    label={'رمز عبور'}
-                    type={'password'}
-                  />
-                </div>
-                <div className="flex justify-evenly my-2">
-                  <Link href="/Buying/buy">
-                    <button className="bg-green-400 px-10 rounded-sm  py-1 hover:bg-pink-500 transition-all hover:text-white">
-                      ورود
-                    </button>
-                  </Link>
-                  <Link href="/courses/courses">
-                    <button className="bg-yellow-400 px-6 rounded-sm  py-1 hover:bg-yellow-200 hover:text-red-500">
-                      برگشت
-                    </button>
-                  </Link>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
         <div className="my-3">
           <div className="text-center bg-blue-50 py-5">
