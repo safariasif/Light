@@ -30,8 +30,11 @@ import {
   faLocationCrosshairs,
   faLocationPin,
 } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { check } from 'fontawesome';
 
 const DashBoard = () => {
+  const [partation , separtiation]=useState(0);
   const day = new Date();
   const getday= `${day.getHours()}`
   return (
@@ -411,17 +414,42 @@ const DashBoard = () => {
                       className="w-full my-2  outline-none  px-2 py-1 border rounded-md"
                     />
                   </div>
+                  <div>
+                    <h1 className="px-2">تعداد قسمت ها : </h1>
+                    <div className="mx-2 my-2 grid grid-cols-3 gap-2  items-center text-center">
+                      <div
+                        className="border rounded-lg shadow-lg  text-bold text-2xl cursor-pointer  hover:bg-slate-200"
+                        onClick={IncreasePartiation}
+                      >
+                        +
+                      </div>
+                      <div className="border rounded-lg shadow-lg  text-bold text-xl">
+                        {partation}
+                      </div>
+                      <div
+                        className="border rounded-lg shadow-lg  text-bold text-2xl cursor-pointer  hover:bg-slate-200"
+                        onClick={DecreasePartiation}
+                      >
+                        -
+                      </div>
+                    </div>
+                  </div>
                   <div className="mx-2 my-2">
-                    <select className="w-full px-2 py-1 outline-none border rounded-md">
-                      <option className="">تعداد قسمت ها</option>
-                      <option className="">۱</option>
-                      <option className="">۲</option>
-                      <option className="">۳</option>
-                      <option className="">۴</option>
-                      <option className="">۵</option>
-                      <option className="">۶</option>
-                      <option className="">۷</option>
-                    </select>
+                    <h1> افزودن ویدیو به صفحه: </h1>
+                    <div className="flex justify-evenly my-2">
+                      <div className="items-center text-center text-gray-600">
+                        <label>خانه</label>
+                        <input type={'radio'} name="new" />
+                      </div>
+                      <div className="items-center text-center text-gray-600">
+                        <label>جدید ترین ها</label>
+                        <input type={'radio'} name="new" />
+                      </div>
+                      <div className="items-center text-center text-gray-600">
+                        <label>دوره های آموزشی</label>
+                        <input type={'radio'} name="new" checked />
+                      </div>
+                    </div>
                   </div>
                   <div className="mx-2 my-2">
                     <label> تاریخ ثبت :‌ </label>
@@ -567,7 +595,6 @@ const DashBoard = () => {
                     format={'h:mm:ssa'}
                     ticking={true}
                     className="my-3 text-2xl uppercase"
-                    
                   />
                 </div>
               </form>
@@ -580,6 +607,12 @@ const DashBoard = () => {
   function Logout() {
     window.location = '/';
   }
+  function IncreasePartiation(){
+    separtiation(partation+1);
+  }
+   function DecreasePartiation() {
+     separtiation(partation - 1);
+   }
 };
 
 export default DashBoard;
