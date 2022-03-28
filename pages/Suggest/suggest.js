@@ -27,7 +27,7 @@ render() {
             </div>
             <div className="my-4 md:w-8/12 w-10/12 mx-auto">
               <button className="block w-full py-2 bg-green-400 text-gray-700 hover:bg-green-300 transition-all hover:text-gray-800 rounded-full shadow-lg">
-                ثبت نام
+                ارسال
               </button>
             </div>
           </form>
