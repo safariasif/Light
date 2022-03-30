@@ -1,6 +1,6 @@
 import Navbar from '../../components/Navbar/navbar';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '../../components/Footer/footer';
 import {
@@ -27,6 +27,11 @@ import Input from '../Regester/inputRegester';
 const Courses = () => {
   const [heart, setHeart] = useState(3);
   const [showModal, setShowModal] = useState(false);
+  const [jsdata,setjsdata]= useState([]);
+  useEffect(()=>{
+   const response= Data.javaScript;
+   setjsdata(response);
+  })
   return (
     <div className=" m-0 p-0 ">
       <Meta title={'دوره های آموزشی'} />
@@ -159,7 +164,7 @@ const Courses = () => {
           </h1>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-4">
-          {Data.javaScript.map((js, index) => {
+          {jsdata.map((js, index) => {
             return (
               <div
                 key={index}
