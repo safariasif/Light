@@ -40,26 +40,25 @@ a {
   border-radius: 5px;
 }
 .items {
-  @apply mx-4 py-1 md:hover:bg-gray-100 hover:px-3;
+  @apply mx-4 py-1 md:hover:bg-gray-100;
 }
 /* end of Navigation Bar */
 
 /* start of Banner section */
 .banner {
   background-image: linear-gradient(135deg, #fffeff 30%, #d7fffe 100%);
-  height: 40vh;
   text-align: center;
 
 }
 .bg{
   background-image: linear-gradient(135deg, #fffeff 30%, #d7fffe 100%);
 }
-.title h1 {
+.title h2 {
   letter-spacing: 7px;
   color: green;
 }
-.title h1 {
-  @apply font-bold text-3xl pt-10;
+.title h2 {
+  @apply font-bold text-3xl;
 }
 .description span {
   word-spacing: 3px;
@@ -68,7 +67,7 @@ a {
 .description {
   @apply mt-5 text-green-900 font-bold;
 }
-.banner .title h1 {
+.banner .title h2 {
   animation-name: Light;
   animation-duration: 4s;
 }
@@ -118,9 +117,10 @@ a {
 /* start of footer */
 .footer{
  
-  background-image: linear-gradient(#0021ae,#00dfa2);
+/*   background-image: linear-gradient(#0021ae,#00dfa2);
   border-top-left-radius: 100px;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 20px; */
+  background-color: rgba(124,64,215,255);
 }
 /* end of footer */
 
@@ -178,14 +178,14 @@ a {
 }
 .courses{
   display: none; 
-  transition: 5s;
-  height: 100px;
+  transition: 0.5s;
+  height: 0;
 }
 
 .catagory:hover .courses{
   display: block;
-  transition:5s;
-  height: 200px;
+  transition: 0.75s;
+  height: 300px;
 }
 .courses li{
   border-radius: 5px;

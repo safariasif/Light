@@ -22,7 +22,7 @@ import {
   faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../../components/Meta/Meta';
-import Data from '../../components/Courses/data';
+import Data from '../../constant/data'
 import Input from '../Regester/inputRegester';
 const Courses = () => {
   const [heart, setHeart] = useState(3);
@@ -74,7 +74,7 @@ const Courses = () => {
                   />
                 </div>
               </div>
-              <ul className=" my-1 courses">
+              <ul className=" my-1 courses ">
                 <li className="px-4 py-1 all">
                   <Link href="/">
                     <div>
@@ -159,18 +159,18 @@ const Courses = () => {
           </ul>
         </div>
         <div className="text-center w-full mx-auto">
-          <h1 className="text-2xl font-bold text-gray-700 my-3">
+          <h2 className="text-2xl font-bold text-gray-700 my-8">
             دوره های آموزشی جاوا اسکریپت
-          </h1>
+          </h2>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center gap-12 md:mx-24 mx-8">
           {jsdata.map((js, index) => {
             return (
               <div
                 key={index}
-                className="border border-2 rounded-xl cursor-pointer"
+                className="border border-2 rounded-xl cursor-pointer bg-gray-100"
               >
-                <div className="bg-gray-100">
+                <div className="rounded-xl bg-gray-100">
                   <Link href={`/WebBasic/${js.slug}`} key={index}>
                     <div>
                       <div
@@ -234,7 +234,7 @@ const Courses = () => {
                             <span>{js.price > 0 ? js.rate : ''}</span>
                           </span>
                         </div>
-                        <div className="left flex">
+                        <div className="left flex pb-6">
                           <div className="extends-btn" onClick={IncreaseHeart}>
                             <a className="b-text" href="/">
                               علاقه
@@ -298,7 +298,7 @@ const Courses = () => {
                                         />
                                       </form>
                                     </div>
-                                    <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                                    <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200  rounded-b">
                                       <Link href="/Buying/buy">
                                         <button
                                           className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
@@ -333,7 +333,7 @@ const Courses = () => {
                           <span>{js.price > 0 ? js.rate : ''}</span>
                         </span>
                       </div>
-                      <div className="left flex">
+                      <div className="left flex pb-8">
                         <div className="extends-btn" onClick={IncreaseHeart}>
                           <a className="b-text" href="/">
                             علاقه
@@ -356,13 +356,7 @@ const Courses = () => {
             );
           })}
         </div>
-        <div className="my-3">
-          <div className="text-center bg-blue-50 py-5">
-            <h1 className="text-2xl">سیر تا پیاز پایتون و آندروید</h1>
-          </div>
-        </div>
       </div>
-
       <Footer />
     </div>
   );

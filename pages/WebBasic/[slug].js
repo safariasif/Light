@@ -1,4 +1,4 @@
-import Data from "../../components/Courses/data";
+import Data from "../../constant/data";
 import { useRouter } from "next/dist/client/router";
 import Navbar from "../../components/Navbar/navbar";
 import Footer from "../../components/Footer/footer";

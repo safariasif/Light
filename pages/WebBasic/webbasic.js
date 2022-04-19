@@ -1,4 +1,4 @@
-import Data from '../../components/Courses/data';
+import Data from '../../constant/data'
 import Link from 'next/link';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,8 +24,8 @@ console.log(loading)
          }, 5000);       
  }
   return (
-    <div className="container">
-      <div className="text-center">
+    <div className="container-fluid justify-center">
+      <div className="text-center my-12">
         <h1 className="mx-6 my-6 text-bold text-3xl">
           دوره های ابتدایی طراحی وب
         </h1>
@@ -39,8 +39,8 @@ console.log(loading)
           طراحی قالب فروشگاهی آنلاین را از صفر تا به صد یاد خواهید گرفت
         </span>
       </div>
-      <div className="row my-5 space-x-4 mx-4">
-        <div className="card grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-3 ">
+      <div className="row my-5 space-x-4 mx-12 md:mx-24">
+        <div className="card grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-12 ">
           {(loading ? (
             course.map((item, index) => {
               return (

@@ -1,9 +1,9 @@
 const Banner=()=>{
     return(
         <div className="container-fluid banner shadow-xl">
-            <div className="row">
+            <div className="row grid content-center h-56">
                 <div className="title">
-                    <h1 className="">چراغ</h1>
+                    <h2 className="">چراغ</h2>
                 </div>
                 <div className="description">
                     <span>
