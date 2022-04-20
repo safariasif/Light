@@ -46,37 +46,6 @@ const Slug =()=>{
           <span className="">{items.description}</span>
         </div>
         <div className="grid md:grid-cols-3 grid-cols-1 mx-5 my-4 gap-4">
-          <div className="col-span-2 border border-2 mt-5 rounded-md">
-            <div className="text-center my-2 font-mono text-2xl ">
-              <h1>مقدمه و آشنایی با {items.name}</h1>
-            </div>
-            <div>
-              <video src={items.video} controls className="px-3 py-3" />
-            </div>
-            <div className="row text-center md:my-12 my-2">
-              <h1 className="text-bold text-3xl mb-4 ">قسمت ها</h1>
-              <div>
-                {items.partions.map((p) => {
-                  return (
-                    <table key={items.id} className="table w-full">
-                      <tbody>
-                        <tr className="border grid grid-cols-4 text-center hover:bg-slate-100">
-                          <td className="py-2">{p[0]}</td>
-                          <td className="py-2">{p[1]}</td>
-                          <td className="py-2">{p[2]}</td>
-                          <Link href="/">
-                            <td className="py-2 cursor-pointer rounded-md hover:text-green-500  text-center">
-                              {p[3]}
-                            </td>
-                          </Link>
-                        </tr>
-                      </tbody>
-                    </table>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
           <div className="my-5 px-5 py-5 border border-2 rounded-md">
             <div className="border px-4 py-2 rounded-md">
               <h1>قیمت</h1>
@@ -195,6 +164,37 @@ const Slug =()=>{
                 مالی به سود نرسیدید درکنار شما باشم
               </p>
               <span className="text-pink-400 pr-4">آصف صفری</span>
+            </div>
+          </div>
+          <div className="col-span-2 border border-2 mt-5 rounded-md">
+            <div className="text-center my-2 font-mono text-2xl ">
+              <h1>مقدمه و آشنایی با {items.name}</h1>
+            </div>
+            <div>
+              <video src={items.video} controls className="px-3 py-3" />
+            </div>
+            <div className="row text-center md:my-12 my-2">
+              <h1 className="text-bold text-3xl mb-4 ">قسمت ها</h1>
+              <div>
+                {items.partions.map((p) => {
+                  return (
+                    <table key={items.id} className="table w-full">
+                      <tbody>
+                        <tr className="border grid grid-cols-4 text-center hover:bg-slate-100">
+                          <td className="py-2">{p[0]}</td>
+                          <td className="py-2">{p[1]}</td>
+                          <td className="py-2">{p[2]}</td>
+                          <Link href="/">
+                            <td className="py-2 cursor-pointer rounded-md hover:text-green-500  text-center">
+                              {p[3]}
+                            </td>
+                          </Link>
+                        </tr>
+                      </tbody>
+                    </table>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

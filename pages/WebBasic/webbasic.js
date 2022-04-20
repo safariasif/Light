@@ -21,7 +21,7 @@ console.log(loading)
        const response= Data.WebBasic;
          setTimeout(() => {
            return setcourse(response), isloading(true);
-         }, 5000);       
+         }, 1000);       
  }
   return (
     <div className="container-fluid justify-center">

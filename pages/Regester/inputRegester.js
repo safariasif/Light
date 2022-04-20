@@ -6,6 +6,7 @@ const Input = ({
   value,
   onChange,
   password,
+  req,
 }) => {
   return (
     <div className="md:my-2">
@@ -19,6 +20,7 @@ const Input = ({
         name={name}
         onChange={onChange}
         value={value}
+        required={req}
       ></input>
     </div>
   );

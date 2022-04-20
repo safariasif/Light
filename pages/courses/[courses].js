@@ -1,3 +1,4 @@
+
 import Navbar from '../../components/Navbar/navbar';
 import Link from 'next/link';
 import { useState,useEffect } from 'react';
@@ -24,6 +25,8 @@ import {
 import Meta from '../../components/Meta/Meta';
 import Data from '../../constant/data'
 import Input from '../Regester/inputRegester';
+import SliderBlog from '../../components/slider/SliderBlog';
+import Slider from 'react-slick/lib/slider';
 const Courses = () => {
   const [heart, setHeart] = useState(3);
   const [showModal, setShowModal] = useState(false);
@@ -355,6 +358,17 @@ const Courses = () => {
               </div>
             );
           })}
+        </div>
+        <div className="text-center w-full mx-auto">
+          <h2 className="text-2xl font-bold text-gray-700 my-12">
+            دوره های آموزشی پایتون
+          </h2>
+        </div>{' '}
+        <div>
+          <SliderBlog/>
+        </div>
+        <div>
+         
         </div>
       </div>
       <Footer />
