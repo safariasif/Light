@@ -15,6 +15,19 @@ module.exports = {
       xxl: '1440px',
       lxl: '1900px',
     },
+    height: {
+      100: '100px',
+      195: '195px',
+      300: '300px',
+      400: '400px',
+      500: '574px',
+      580: '580px',
+    },
+    backgroundColor: {
+      bgWave: '#1E3D59',
+      white: '#ffffff',
+      gray: '#F1F1F1',
+    },
   },
   plugins: [],
 };

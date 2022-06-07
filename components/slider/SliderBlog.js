@@ -13,34 +13,49 @@ const SliderBlog = (props) => {
   });
   const settings = {
     className: 'center',
-    centerMode: true,
+    /* centerMode: true, */
+    dots: true,
+    dotsClass: 'slick-dots slick-thumb',
+    lazyLoad: true,
     infinite: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
     speed: 500,
-    autoplay:true,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    initialSlide: 2,
+    speed: 500,
+    autoplay: true,
   };
   const Mdsettings = {
     className: 'center',
-    centerMode: true,
+    /* centerMode: true, */
+    dots: true,
+    dotsClass: `slick-dots dots`,
+    lazyLoad: true,
     infinite: true,
-    centerPadding: '60px',
+    speed: 500,
     slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 2,
     speed: 500,
     autoplay: true,
   };
   const Smsettings = {
     className: 'center',
-    centerMode: true,
+    /* centerMode: true, */
+    dots: true,
+    dotsClass: 'slick-dots slick-thumb',
+    lazyLoad: true,
     infinite: true,
-    centerPadding: '60px',
+    speed: 500,
     slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 1,
     speed: 500,
     autoplay: true,
   };
   return (
     <>
-      <div className="md:block sm_smobile:hidden sm:hidden">
+      <div className="md:block sm_smobile:hidden sm:hidden px-12">
         <Slider {...settings}>
           {python.map((item, index) => {
             return (

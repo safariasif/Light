@@ -14,7 +14,7 @@ const Parotange=()=>{
       <div>
         <Meta title={'حمایت از چراغ'} />
         <Navbar />
-        <div>
+        <div className="pt-24">
           <div className="text-center md:my-10 my-5 items-center">
             <span className="px-2 text-2xl text-slate-700 tracking-wider">
               حمایت از چراغ
@@ -31,7 +31,7 @@ const Parotange=()=>{
               حمایت از چراغ باعث دلگرمی و رشد بیشتر چراغ خواهد شد
             </p>
             <p className="text-slate-600 my-2">
-              " بجای شکست دادن یگدیگر بیاید از همدیگر حمایت کنیم تا همه ما موفق
+               بجای شکست دادن یگدیگر بیاید از همدیگر حمایت کنیم تا همه ما موفق
               شویم "
             </p>
           </div>
@@ -64,7 +64,7 @@ const Parotange=()=>{
             </div>
             <div className="items-center md:w-6/12 w-10/12 mx-auto text-center ">
               <button
-                className="bg-fuchsia-700 text-white rounded-md w-full py-2 my-2 hover:bg-pink-900"
+                className="bg-fuchsia-700 text-white rounded-md w-full py-2 my-2 bg-bgWave"
                 onClick={Payement}
               >
                 ادامه

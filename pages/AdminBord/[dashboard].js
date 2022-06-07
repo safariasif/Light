@@ -140,7 +140,7 @@ const DashBoard = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-4 min-h-screen leftside">
+        <div className="col-span-4 min-h-screen leftside h-500 overflow-y-scroll">
           <div className="mainsection">
             <div className="grid md:grid-cols-4 grid-cols-1 justify-between p-4">
               <div className="col-span-1  items-center sm:my-1">

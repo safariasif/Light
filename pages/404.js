@@ -14,7 +14,7 @@ const NotFount=()=>{
       <div className="text-center mt-36 cursor-pointer">
         <Meta title={"صفحه یافت نشد"}></Meta>
         {/* <h1 className="text-blue-600 font-bold text-8xl">404</h1> */}
-        <img src="/404.svg" className="mx-auto w-48 mb-4"></img>
+        <img src="/404.svg" className="mx-auto w-72 mb-4 h-195"></img>
         <h1 className="text-4xl  my-2 text-red-500">
           <span className=" px-2"> متعسفانه</span>
           <span className=""> صفحه یافت نشد </span>

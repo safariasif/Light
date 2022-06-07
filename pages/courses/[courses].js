@@ -39,7 +39,7 @@ const Courses = () => {
     <div className=" m-0 p-0 ">
       <Meta title={'دوره های آموزشی'} />
       <Navbar />
-      <div className="container-fluid m-0 p-0 items-center mx-4">
+      <div className="container-fluid m-0 p-0 items-center mx-4 pt-16">
         <div className="row grid md:grid-cols-2 grid-cols-1">
           <div className="text-center lg:mt-28 md:mt-12 mt-8">
             <div className="headerCourse">
@@ -365,11 +365,25 @@ const Courses = () => {
           </h2>
         </div>{' '}
         <div>
-          <SliderBlog/>
+          <SliderBlog />
         </div>
+        <div className="text-center w-full mx-auto">
+          <h2 className="text-2xl font-bold text-gray-700 my-12">
+            دوره های آموزشی ارز دیجیتال
+          </h2>
+        </div>{' '}
         <div>
-         
+          <SliderBlog />
         </div>
+        <div className="text-center w-full mx-auto">
+          <h2 className="text-2xl font-bold text-gray-700 my-12">
+            دوره های آموزشی پی اچ پی (PHP)
+          </h2>
+        </div>{' '}
+        <div>
+          <SliderBlog />
+        </div>
+        <div></div>
       </div>
       <Footer />
     </div>

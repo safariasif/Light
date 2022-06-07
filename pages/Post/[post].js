@@ -8,7 +8,7 @@ class Post extends Component{
               <div>
                 <Meta title={'پست ها'}/>
                 <Navbar />
-                <div className="gird">
+                <div className="gird pt-36">
                   <div className="item-start m-6 grid grid-cols-2 gap-3">
                     <div className="">
                       <div className="flex">

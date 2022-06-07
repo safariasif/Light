@@ -22,8 +22,8 @@ import {
 import Link from 'next/link'
 const SliderDetails = (props) => {
   return (
-    <div>
-      <div className="border border-2 rounded-xl cursor-pointer bg-gray-100 md:mx-8 mx-2">
+    <div className='py-6'>
+      <div className="border border-2 rounded-xl shadow-2xl  cursor-pointer bg-gray-100 md:mx-8 mx-2">
         <div className="rounded-xl bg-gray-100">
           <div>
             <div

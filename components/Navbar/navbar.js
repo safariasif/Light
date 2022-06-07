@@ -7,8 +7,8 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
   console.log(name);
   const [open, setopen] = useState(false);
   return (
-    <div className="py-5" style={{ background: bgColor }}>
-      <div className="container-fluid m-0 p-0 navigation-bar">
+    <div className="" style={{ background: bgColor }}>
+      <div className="container-fluid m-0 p-0 navigation-bar bg-white z-10 py-5  fixed w-full shadow-gray-400 shadow-2xl">
         <div className="m-0 p-0 row  lg:flex lg:justify-between lg:items-center rounded text-center ">
           <ul
             className={`text-right lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute  bg-white w-[100%] right-0 px-4 lg:w-auto lg:py-0 py-4  lg:pl-0 pl-7 lg:opacity-100 transition-all ease-in duration-500 ${
@@ -20,7 +20,9 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
           >
             <li className="items">
               <Link href="/">
-                <a>خانه</a>
+                <a className="text-fuchsia-700 active border-b border-b-4">
+                  خانه
+                </a>
               </Link>
             </li>
             <li className="items">

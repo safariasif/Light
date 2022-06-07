@@ -1,8 +1,11 @@
 import Data from '../../constant/data'
 import Link from 'next/link';
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faHeart, faComment ,faStar, faSlash } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image'
+import Loader from 'next/dynamic'
+import {AiFillLike} from 'react-icons/ai'
+import { FcLike } from 'react-icons/fc';
+import { MdAddComment } from 'react-icons/md';
 import axios from 'axios';
 import { useEffect } from 'react';
 import Loading from '../../components/Loading/loading'
@@ -24,7 +27,7 @@ console.log(loading)
          }, 1000);       
  }
   return (
-    <div className="container-fluid justify-center">
+    <div className="container-fluid lg:mx-24 mx-12 w-100">
       <div className="text-center my-12">
         <h1 className="mx-6 my-6 text-bold text-3xl">
           دوره های ابتدایی طراحی وب
@@ -39,119 +42,98 @@ console.log(loading)
           طراحی قالب فروشگاهی آنلاین را از صفر تا به صد یاد خواهید گرفت
         </span>
       </div>
-      <div className="row my-5 space-x-4 mx-12 md:mx-24">
-        <div className="card grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-12 ">
-          {(loading ? (
+      <div className="row my-5 space-x-5 h-500   snap-mandatory scroll-smooth pt-6 pb-8 overflow-x-hidden webbasicCourses px-4">
+        <div className="card grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 grid-cols-1  gap-16 mx-auto ">
+          {loading ? (
             course.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" space-x-2 md:space-x-4 border border-2  rounded-xl cursor-pointer"
+                  className=" space-x-2 md:space-x-4 border border-2 shadow-2xl   rounded-2xl cursor-pointer"
                 >
-                  <div className="bg-gray-100">
-                    <Link href={`/WebBasic/${item.slug}`} key={index}>
+                  <div className="bg-gray-100 py-4 rounded-2xl">
+                    <Link href={`/webbasic/${item.slug}`} key={index}>
                       <div>
-                        <div
-                          style={{ direction: 'ltr' }}
-                          className="star text-yellow-400 px-2 py-2"
-                        >
-                          <FontAwesomeIcon
-                            icon={faStar}
-                            style={{ fontSize: 17 }}
-                            className="hover:text-yellow-500"
-                          />
-                          <FontAwesomeIcon
-                            icon={faStar}
-                            style={{ fontSize: 17 }}
-                            className="hover:text-yellow-500"
-                          />
-                          <FontAwesomeIcon
-                            icon={faStar}
-                            style={{ fontSize: 17 }}
-                            className="hover:text-yellow-500"
-                          />
-                          <FontAwesomeIcon
-                            icon={faStar}
-                            style={{ fontSize: 17 }}
-                            className="hover:text-yellow-500"
-                          />
-                        </div>
-                        <img
+                        <Image
+                          width={500}
+                          height={200}
+                          quality={100}
+                          /* loader={Loader} */
                           src={item.img}
-                          className="hover:opacity-50 h-48 mx-auto transition-all"
-                        ></img>
+                          /*  layout="responsive" */
+                          alt="Group"
+                        />
                         <div className="px-3">
-                          <h1 className="mt-3 mb-2">
+                          <h1 className="mt-3 mb-2 text-right flex flex-row-reverse text-right">
                             <span className="text-gray-500">{item.info}</span>
                             <span className="text-blue-700 uppercase text-1xl font-bold font-mono  hover:text-blue-800">
-                              {item.name}
+                              {item.name}:
                             </span>
                           </h1>
-                          <h1 className="">
-                            <span className="text-gray-500">مدت : </span>
+                          <h1 className="flex-row-reverse text-right">
+                            <span className="text-gray-500">مدت </span>
                             <span className="text-blue-700 uppercase text-1xl font-bold font-mono  hover:text-blue-800">
-                              {item.time}
+                              :{item.time}
                             </span>
                           </h1>
-                          <h1 className="mb-3">
-                            <span className="text-gray-500">مدرس : </span>
+                          <h1 className="mb-3 flex-row-reverse text-right">
+                            <span className="text-gray-500">مدرس </span>
                             <span className="text-blue-700 uppercase text-1xl font-bold font-mono  hover:text-blue-800">
-                              {item.instructor}
+                              :{item.instructor}
                             </span>
                           </h1>
                         </div>
                       </div>
                     </Link>
-                    <div className="px-3">
-                      <div className="flex my-2 bg-slate-300 py-2 rounded-md px-3  hover:bg-teal-500 transition-all">
+                    <div className="px-3 flex-row-reverse flex">
+                      <div className="flex my-2 bg-slate-100 py-2 rounded-md px-3  transition-all">
                         <button className="text-gray-700 hover:text-gray-800 ">
                           {item.price}
                         </button>
                       </div>
                     </div>
                     <div className="px-3">
-                      <div className="flex justify-around border border-t-2 text-sm border-b-2 border-r-0 border-l-0 my-2 py-1 text-center rounded-md">
-                        <p className="text-center items-center">
-                          <span className="px-2 py-0 rounded-full bg-green-500 text-white text-sm mx-2">
-                            {comment}
+                      <div className="flex justify-around pb-2 pt-2  text-sm border-t border-r-0 border-l-0 my-2 py-1 text-center rounded-md">
+                        <p className="text-center items-center flex">
+                          <span className="px-2 py-0 rounded-full bg-green-500  text-sm mx-2">
+                            {item.comment}
                           </span>
                           <span
                             className="text-gray-700 hover:text-gray-500 "
                             onClick={IncreasComment}
                           >
-                            <FontAwesomeIcon
-                              icon={faComment}
-                              style={{ fontSize: 17 }}
+                            <MdAddComment
+                              style={{ fontSize: 20 }}
                               className="mt-1"
                             />
                           </span>
                         </p>
-                        <p>
-                          <span className="px-2 py-0 rounded-full bg-red-500 text-white mx-2 text-sm">
-                            {heart}
+                        <p className="text-center items-center flex">
+                          <span className="px-2 py-0 rounded-full bg-red-500  mx-2 text-sm">
+                            {item.heart}
                           </span>
                           <span
                             className="text-red-600 hover:text-red-400"
                             onClick={IncreaseHeart}
                           >
-                            <FontAwesomeIcon
-                              icon={faHeart}
-                              style={{ fontSize: 17 }}
-                              className="mt-1"
+                            <FcLike
+                              style={{ fontSize: 20 }}
+                              className="mt-1 text-red-600"
                             />
                           </span>
                         </p>
-                        <p>
-                          <span className="px-2 py-0 rounded-full bg-blue-500 text-white mx-2 text-sm">
-                            {like}
+                        <p className="text-center items-center flex">
+                          <span className="px-2 py-0 rounded-full bg-blue-500  mx-2 text-sm">
+                            {item.like}
                           </span>
                           <span
                             className="hover:text-blue-400 text-blue-600 transition-all"
-                            onClick={IncreaseLike}
+                            onClick={() => {
+                              item.like + 1;
+                            }}
                           >
-                            <FontAwesomeIcon
-                              icon={faThumbsUp}
-                              style={{ fontSize: 17 }}
+                            <AiFillLike
+                              style={{ fontSize: 20 }}
                               className="mt-1"
                             />
                           </span>
@@ -163,8 +145,8 @@ console.log(loading)
               );
             })
           ) : (
-            <Loading/>
-          ))}
+            <Loading />
+          )}
         </div>
       </div>
     </div>

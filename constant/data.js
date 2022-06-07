@@ -2,7 +2,7 @@ const Data = {
   WebBasic: [
     {
       id: 1,
-      info: 'آموزش صفر تا به صد : ',
+      info: 'آموزش صفر تا به صد  ',
       name: 'html',
       level: 'مقدماتی تا ادوانس',
       prerequisite: 'فقط علاقه',
@@ -44,7 +44,7 @@ const Data = {
     },
     {
       id: 2,
-      info: 'آموزش صفر تا به صد : ',
+      info: 'آموزش صفر تا به صد  ',
       name: 'css',
       video: '/video/css.mp4',
       level: 'مقدماتی تا ادوانس',
@@ -84,7 +84,7 @@ const Data = {
     },
     {
       id: 3,
-      info: 'آموزش صفر تا به صد : ',
+      info: 'آموزش صفر تا به صد  ',
       name: 'Bootstrap',
       video: '/video/css.mp4',
       level: 'مقدماتی تا ادوانس',
@@ -123,7 +123,7 @@ const Data = {
     },
     {
       id: 4,
-      info: 'آموزش صفر تا به صد : ',
+      info: 'آموزش صفر تا به صد  ',
       prerequisite: 'فقط علاقه',
       name: 'Flex Box',
       video: '/video/css.mp4',
@@ -160,7 +160,7 @@ const Data = {
     },
     {
       id: 5,
-      info: 'آموزش صفر تا به صد : ',
+      info: 'آموزش صفر تا به صد  ',
       name: 'CSS Grid',
       video: '/video/css.mp4',
       level: 'مقدماتی تا ادوانس',
@@ -196,7 +196,7 @@ const Data = {
     },
     {
       id: 6,
-      info: 'طراحی  : ',
+      info: 'طراحی   ',
       name: ' قالب فروشگاه آنلاین',
       video: '/video/css.mp4',
       prerequisite: 'آشنایی با html & css',
@@ -585,5 +585,68 @@ const Data = {
     },
   ],
 };
-
+export const Information = {
+  TeacherInformation: [
+    {
+      id: 1,
+      src: '/profile/profile (2).jpg',
+      name: 'آصف',
+      lastName: 'صفری',
+      job: 'Developer',
+      degreeOfEducation: 'Master',
+      experianceOfCooding: 2,
+      about:
+        'پیر مردی هر روز تو محله می دید پسر کی با کفش های پاره و پای برهنه با توپ پلاستیکی فوتبال بازی می کند، روزی رفت ی کتانی نو خرید و اومد و به پسرک گفت بیا این کفشا رو بپوش…پسرک کفشا رو پوشید و خوشحال رو به پیر مرد کرد و گفت: شما خدایید؟! پیر مرد لبش را گزید و گفت نه! پسرک گفكه کفش ندارم…',
+      twetter: '/profile/twitter.svg',
+      linkedIn: '/profile/linkdin.svg',
+      facebook: '/profile/facebook.svg',
+      instagram: '/profile/instagram.svg',
+    },
+    {
+      id: 2,
+      name: 'سجاد',
+      lastName: 'حسینی',
+      src: '/profile/profile (2).jpg',
+      job: 'SEO',
+      degreeOfEducation: 'Master',
+      experianceOfCooding: 2,
+      about:
+        'پیر مردی هر روز تو محله می دید پسر کی با کفش های پاره و پای برهنه با توپ پلاستیکی فوتبال بازی می کند، روزی رفت ی کتانی نو خرید و اومد و به پسرک گفت بیا این کفشا رو بپوش…پسرک کفشا رو پوشید و خوشحال رو به پیر مرد کرد و گفت: شما خدایید؟! پیر مرد لبش را گزید و گفت نه! پسرک گفتا گفتم كه کفش ندارم…',
+      twetter: '/profile/twitter.svg',
+      linkedIn: '/profile/linkdin.svg',
+      facebook: '/profile/facebook.svg',
+      instagram: '/profile/instagram.svg',
+    },
+    {
+      id: 3,
+      name: 'نعمت',
+      lastName: 'همنوا',
+      src: '/profile/profile (2).jpg',
+      job: 'Developer',
+      degreeOfEducation: 'Master',
+      experianceOfCooding: 2,
+      about:
+        'پیر مردی هر روز تو محله می دید پسر کی با کفش های پاره و پای برهنه با توپ پلاستیکی فوتبال بازی می کند، روزی رفت ی کتانی نو خرید و اومد و به پسرک گفت بیا این کفشا رو بپوش…پسرک کفشا رو پوشید و خوشحال رو به پیر مرد کرد و گفت: شما خدایید؟! پیر مرد لبش را گزید و گفت نه! پسرک گفت  كه کفش ندارم…',
+      twetter: '/profile/twitter.svg',
+      linkedIn: '/profile/linkdin.svg',
+      facebook: '/profile/facebook.svg',
+      instagram: '/profile/instagram.svg',
+    },
+    {
+      id: 4,
+      name: 'علی',
+      lastName: 'قاسمی',
+      src: '/profile/profile (2).jpg',
+      job: 'Developer',
+      degreeOfEducation: 'Master',
+      experianceOfCooding: 2,
+      about:
+        'پیر مردی هر روز تو محله می دید پسر کی با کفش های پاره و پای برهنه با توپ پلاستیکی فوتبال بازی می کند، روزی رفت ی کتانی نو خرید و اومد و به پسرک گفت بیا این کفشا رو بپوش…پسرک کفشا رو پوشید و خوشحال رو به پیر مرد کرد و گفت: شما خدایید؟! پیر مرد لبش را گزید و گفت نه! پسرک گفت كه کفش ندارم…',
+      twetter: '/profile/twitter.svg',
+      linkedIn: '/profile/linkdin.svg',
+      facebook: '/profile/facebook.svg',
+      instagram: '/profile/instagram.svg',
+    },
+  ],
+};
 export default  Data;
