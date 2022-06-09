@@ -18,8 +18,8 @@ const Regester = () => {
       <div className="registerpage">
         <Meta title={'ثبت نام'} icon={'/404.svg'}></Meta>
         <Navbar />
-        <div className="regetser pt-28 grid grid-cols-12  gap-x-12 md:px-24 px-4">
-          <div className="text-start   text-lg col-span-8">
+        <div className="regetser pt-36 md:flex px-12 md:justify-between block gap-x-36">
+          <div className="text-start w-full  text-lg col-span-8 h-400">
             <Formik
               initialValues={{
                 name: name,
@@ -49,7 +49,7 @@ const Regester = () => {
               <Form>
                 <form>
                   <div className="text-center font-bold text-2xl">
-                    <h1 className="text-white">ثبت نام</h1>
+                    <h1 className="text-white sm:text-4xl text-2xl">ثبت نام</h1>
                   </div>
 
                   <Input
@@ -58,6 +58,7 @@ const Regester = () => {
                     placeholder="نام تان را وارد کنید"
                     type={'text'}
                     values={name}
+                    width="w-full"
                   />
                   <Input
                     name={'email'}
@@ -65,6 +66,7 @@ const Regester = () => {
                     placeholder="ایمیل تان را وارد کنید"
                     label={'ایمیل :'}
                     values={email}
+                    width="w-full"
                   />
                   <Input
                     name={'password'}
@@ -73,6 +75,7 @@ const Regester = () => {
                     label={'رمر عبور : '}
                     icons={true}
                     strong={true}
+                    width="w-full"
                   />
                   <Input
                     name={'repassword'}
@@ -80,12 +83,13 @@ const Regester = () => {
                     placeholder="رمز عبور تان را تایید کنید"
                     label={'تکرار رمز عبور : '}
                     icons={true}
+                    width="w-full"
                   />
-                  <div className="my-4 pt-4 w-10/12">
+                  <div className="my-4 pt-4 w-full">
                     <button className="block w-full  py-2 bg-bgWave text-white  transition-all hover:text-gray-300 rounded-full shadow-lg">
                       ثبت نام
                     </button>
-                    <div className='pt-4'>
+                    <div className="pt-4">
                       <Link href="Login/login">
                         <h2 className="text-white text-center">ورود ؟</h2>
                       </Link>
@@ -95,33 +99,16 @@ const Regester = () => {
               </Form>
             </Formik>
           </div>
-          <div className="border border shadow-2xl  md:mt-16 rounded-md col-span-4 text-center">
-            {/* <h1 className="my-0 py-0 pt-4  text-center">
-              انتخاب تصویر دلخواه است
-            </h1> */}
-            {/* <div className=" grid md:block justify-center md:w-36 md:h-36 w-24 h-24 mt-4 rounded-full items-center"> */}
-            {/* <img
-                src={''}
-                alt="انتخاب تصویر دلخواه است"
-                className="md:w-36 md:h-36 w-28 h-28 rounded-full"
-              ></img> */}
-            {/*  </div> */}
-            {/*  <div className="bg-gray-700 grid  md:block  md:w-20 md:h-20 w-16 h-16 rounded-full  items-center mt-[-30px]   small-circle ">
-              <input
-                className="w-10 my-5   w-20 h-36 rounded-full  opacity-0"
-                type="file"
-                name="myImage"
-              
-              ></input>
-            </div> */}
+          <div className="border rounded-2xl mt-14 w-full mr-5 h-[400px]">
             <div className="my-4  mr-0 m-0 flex-wrap  ">
-              <h2 className="text-4xl px-5 pt-3 text-white border-b w-10/12 mx-auto pb-2 shadow-2xl text-center items-center flex justify-center ">
+              <h2 className="sm:text-4xl font-bold text-2xl pt-5 text-white  w-10/12 mx-auto pb-3 shadow-2xl text-center items-center flex justify-center ">
                 چراغ <span className="text-gray-300 px-2">LIGHT</span>
               </h2>
-              <h2 className="text-2xl px-5 text-white pt-8">
+              <hr className="text-white bg-white shadow-2xl h-2 w-6/12 mx-auto"></hr>
+              <h2 className="sm:text-3xl text-2xl px-5 text-white pt-8 text-center">
                 به دنیایی برنامه نویسی چراغ خوش آمدید
               </h2>
-              <h2 className="text-xl px-5 text-white pt-8">
+              <h2 className="sm:text-2xl  text-xl text-white pt-8 text-center">
                 و همچنان میتوانید با
               </h2>
               <div className="flex justify-center gap-5 pt-5">
@@ -186,17 +173,9 @@ const Regester = () => {
                   </svg>
                 </div>
               </div>
-              <h2 className="text-xl px-5 text-white pt-4 text-left">
+              <h2 className="sm:text-2xl text-xl text-white bg-bgWave py-2 w-5/12 mx-auto mt-3 rounded-xl text-left text-center">
                 وارد شوید
               </h2>
-              {/* <h1 className="text-gray-700" style={{ direction: 'ltr' }}>{`${
-                name ? name : `« به دنیایی برنامه نویسی  وب خوش آمدید »`
-              }`}</h1>
-              <span className="m-0 p-0">
-                <h1 className="text-gray-700" style={{ direction: 'ltr' }}>{`${
-                  email ? email : `« موفقیت شما به نور چراغ افزایش میدهد »`
-                }`}</h1>
-              </span> */}
             </div>
           </div>
         </div>

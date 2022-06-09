@@ -28,6 +28,12 @@ module.exports = {
       white: '#ffffff',
       gray: '#F1F1F1',
     },
+    textColor: {
+      textWave: '#1E3D59',
+      white: '#fff',
+      black: '#000000',
+      red: '#D92E09 ',
+    },
   },
   plugins: [],
 };

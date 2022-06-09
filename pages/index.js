@@ -1,13 +1,15 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar/navbar'
+import Head from 'next/head';
+import Navbar from '../components/Navbar/navbar';
 import Banner from '../components/Banner/banner';
 import Meta from '../components/Meta/Meta';
 import Footer from '../components/Footer/footer';
 import WebBasic from './WebBasic/webbasic';
-import WhyLight from '../components/whyLight'
-import { Subscribe } from '../components/subscribe'
-import {OurTeacher} from '../components/ourTeacher'
+import WhyLight from '../components/whyLight';
+import { Subscribe } from '../components/subscribe';
+import { OurTeacher } from '../components/ourTeacher';
 import SubFooter from '../components/Footer/subfooter';
+import Features from '../components/feature/index';
+import Accordaint from '../components/Accordiant';
 export default function Home(props) {
   return (
     <div>
@@ -18,7 +20,9 @@ export default function Home(props) {
       <WebBasic />
       <WhyLight />
       <OurTeacher />
+      <Features />
       <Subscribe />
+      <Accordaint/>
       <Footer />
     </div>
   );

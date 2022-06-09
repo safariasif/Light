@@ -22,8 +22,8 @@ const Footer = () => {
         </svg>
       </div>
       <div className="grid bg-bgWave md:grid-cols-4 gap-5 sm:grid-cols-2 xs:block pb-12 px-8 justify-center content-center container-fluid text-center">
-        <div>
-          <h2 className="">درباره ما:</h2>
+        <div className="text-right">
+          <h2 className="pb-4">درباره ما:</h2>
           <span>
             مام تلاش ما در باره کمیت اموزش و افزایش کورس ها نیست بلکه تمام تمام
             تلاش ما درباره کیفیت آموزش است
@@ -33,18 +33,18 @@ const Footer = () => {
           <h2 className="pb-2">پشنهاد و نظریات خود را با ما شریک کنید</h2>
           <input
             type="text"
-            className="w-full border-2 text-gray-800"
+            className="w-full border-2 text-textWave px-2 py-1 rounded-md outline-none"
             placeholder="نام"
           ></input>
           <textarea
-            className="w-full my-2 border-2 text-gray-800"
+            className="w-full my-2 border-2 text-textWave px-2 py-1 rounded-md outline-none"
             name="message"
             id=""
             cols="30"
             rows="2"
             placeholder="پیام خود را بنویسید"
           ></textarea>
-          <button className="d-block w-full rounded py-1 text-white bg-green-500">
+          <button className="d-block w-full rounded py-1 bg-white text-textWave hover:bg-opacity-70 transition-all">
             ارسال
           </button>
         </div>
@@ -67,24 +67,27 @@ const Footer = () => {
         </div>
         <div className="">
           <div>
-            <h6>و همچنان ما را در صفحات مجازی دنبال کیند</h6>
+            <h6>و همچنان ما را در صفحات مجازی </h6>
           </div>
           {
             <div className="flex  justify-evenly mt-6">
               <Link href="https://www.facebook.com">
-                <FaFacebook className="fa-xl hover:text-green-500 cursor-pointer" />
+                <FaFacebook className="fa-xl hover:opacity-60 cursor-pointer" />
               </Link>
               <Link href="https://www.linkedin.com">
-                <FaLinkedin className="fa-xl hover:text-green-500 cursor-pointer" />
+                <FaLinkedin className="fa-xl hover:opacity-60 cursor-pointer" />
               </Link>
               <Link href="https://www.intsgram.com">
-                <FaInstagramSquare className="fa-xl hover:text-green-500 cursor-pointer" />
+                <FaInstagramSquare className="fa-xl hover:opacity-60 cursor-pointer" />
               </Link>
               <Link href="https://www.Twitter.com">
-                <FaTwitter className="fa-xl hover:text-green-500 cursor-pointer" />
+                <FaTwitter className="fa-xl hover:opacity-60 cursor-pointer" />
               </Link>
             </div>
           }
+          <div className="pt-4">
+            <h6>دنبال کیند </h6>
+          </div>
         </div>
       </div>
     </div>

@@ -3,15 +3,15 @@ import { useState } from 'react';
 import * as Yup from 'yup';
 const Input = ({...props}) => {
   const [field, meta] = useField(props);
-  const [showEye, setShowEye] = useState(false);
+  const [showEye, setShowEye] = useState(true);
   return (
     <div className="md:my-2">
       <label htmlFor={props.name} className=" text-white pr-5 font-bold">
         {props.label}
       </label>
-      <div className="flex justify-between px-3 border rounded-full w-10/12 bg-white">
+      <div className="flex justify-between px-3 border rounded-full  bg-white">
         <input
-          className={`w-10/12 py-1 pl-4 px-3 outline-none  shadow-2xl ${
+          className={`${props.width} py-1 pl-4 px-3 outline-none mx-auto   shadow-2xl ${
             meta.touched && meta.error && 'is-invalid'
           }`}
           {...field}
@@ -61,7 +61,7 @@ const Input = ({...props}) => {
         )}
       </div>
       {meta.touched && meta.error ? (
-        <div className="error text-red-500  pr-5">{meta.error}</div>
+        <div className="error text-red  pr-5">{meta.error}</div>
       ) : null}
     </div>
   );

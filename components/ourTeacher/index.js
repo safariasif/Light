@@ -28,13 +28,13 @@ export const OurTeacher = () => {
      initialSlide: 2,
    };
     return (
-      <div className="mt-0">
+      <div className="mt-0 md:w-full">
         <div className=" ">
-          <h2 className="bg-bgWave pt-20  m-0 bg-opacity-90 z-0 text-center text-5xl text-white">
+          <h2 className="bg-bgWave  pt-20 pb-5  m-0 bg-opacity-90 z-0 text-center text-5xl text-white">
             بهترین استادان ما
           </h2>
           <div className="mt-0 pt-0  ">
-            <Image src={wave} height={320} className="bg-white " />
+            <Image src={wave} height={320} alt='TeacherProfile' className="bg-white " />
           </div>
         </div>
         <div className="mb-16  w-10/12  mx-auto">

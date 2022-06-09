@@ -3,6 +3,7 @@ import Meta from "../../components/Meta/Meta";
 import Navbar from '../../components/Navbar/navbar'
 import Input from "../Regester/inputRegester";
 import SubFooter from "../../components/Footer/subfooter";
+import Accordaint from "../../components/Accordiant";
 import * as Yup from 'Yup';
 import { Formik, useFormik, Form } from 'formik';
 import axios from "axios";
@@ -22,18 +23,19 @@ const Suggest = () => {
         <Meta title={'نظریات / پشنهادات'} />
         <Navbar />
         <div className="pt-36">
+          <Accordaint />
           <div>
             <h2 className="text-center py-4 text-2xl">نظریات و پشنهادات</h2>
           </div>
           <form onSubmit={handelSubmit} method="POst">
-            <div className="md:w-6/12 w-10/12 mx-auto mb-4">
+            <div className="md:w-8/12 w-10/12 mx-auto mb-4">
               <label className="pr-4" htmlFor="name">
                 نام :
               </label>
               <input
                 type={'text'}
                 name="name"
-                className="w-full py-2 pl-4 px-3 outline-none border rounded-full  shadow-2xl"
+                className="w-full py-3 pl-4 px-5 outline-none border rounded-full  shadow-2xl"
                 placeholder="نام تان را بنویسید"
                 value={name}
                 onChange={(e) => {
@@ -41,13 +43,13 @@ const Suggest = () => {
                 }}
               />
             </div>
-            <div className="md:w-6/12 w-10/12 mx-auto mb-4">
+            <div className="md:w-8/12 w-10/12 mx-auto mb-4">
               <label className="pr-4" htmlFor="name">
                 ایمیل :
               </label>
               <input
                 type={'text'}
-                className=" w-full py-2  pl-4 px-3 outline-none border rounded-full  shadow-2xl"
+                className=" w-full py-3  pl-4 px-5 outline-none border rounded-full  shadow-2xl"
                 name="name"
                 placeholder="ایمیل تان را بنویسید"
                 value={email}
@@ -56,14 +58,14 @@ const Suggest = () => {
                 }}
               />
             </div>
-            <div className="md:w-6/12 w-10/12 mx-auto">
-              <label className="text-gray-600 px-2 font-bold" htmlFor="">
+            <div className="md:w-8/12 w-10/12 mx-auto">
+              <label className="text-gray-600 px-4 font-bold" htmlFor="">
                 نظریه / پشنهاد
               </label>
               <textarea
                 required
                 typeof="textarea"
-                className="border border-2 w-full py-1  my-2 outline-none px-4 shadow-lg rounded-md"
+                className="border border-2 w-full py-3  my-2 outline-none px-5 shadow-lg rounded-md"
                 rows={6}
                 value={suggest}
                 onChange={(e) => {
@@ -72,10 +74,10 @@ const Suggest = () => {
                 placeholder={'نظریه و پشنهادات خود را اینجا بنویسید'}
               ></textarea>
             </div>
-            <div className="my-4 md:w-6/12 w-10/12 mx-auto">
+            <div className="my-4 md:w-8/12 w-10/12 mx-auto">
               <button
                 onClick={Message}
-                className="block w-full py-2 bg-bgWave text-white hover:text-gray-300  transition-all  rounded-full shadow-lg"
+                className="block w-full py-4 bg-bgWave text-white hover:opacity-90  transition-all  rounded-full shadow-lg"
               >
                 ارسال
               </button>

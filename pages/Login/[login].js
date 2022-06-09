@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image  from 'next/image';
 import Navbar from '../../components/Navbar/navbar'
 import Meta from '../../components/Meta/Meta'
 import Input from '../Regester/inputRegester';
@@ -6,6 +7,7 @@ import DashBoard from '../AdminBord/[dashboard]';
 import SubFooter from '../../components/Footer/subfooter';
 import { Component } from 'react';
 import * as Yup from 'Yup';
+import loginImage from '../../public/Login/login.svg';
 import { Formik , useFormik , Form} from 'formik';
 
 const Login = () => {
@@ -33,9 +35,9 @@ const Login = () => {
         >
           <Form>
             <div className="w-full mx-auto  pt-28 grid md:grid-cols-2 justify-center content-center items-center space-x-5">
-              <div className="text-start i md:pr-24 px-5 text-lg ">
-                <form>
-                  <div className="text-center font-bold text-2xl">
+              <div className="text-start  md:pr-24 px-5 text-lg  flex justify-center">
+                <form className="w-full mx-auto">
+                  <div className="text-center font-bold sm:text-5xl text-2xl text-white">
                     <h1>ورود</h1>
                   </div>
                   <Input
@@ -43,6 +45,7 @@ const Login = () => {
                     name={'email'}
                     type={'email'}
                     placeholder="ایمیل تان را وارد کنید"
+                    width="w-full"
                   />
                   <Input
                     label={'رمز عبور'}
@@ -50,6 +53,7 @@ const Login = () => {
                     placeholder="رمز عبور تان را وارد کنید"
                     type={'password'}
                     icons={true}
+                    width="w-full"
                   />
                   <div className="my-2">
                     <label className="text-gray-600 px-2 ">
@@ -58,7 +62,7 @@ const Login = () => {
                     <input className="outline-none" type="checkbox"></input>
                   </div>
                   <div className="my-4">
-                    <button className="block w-10/12 py-2 bg-blue-800 text-white bg-bgWave transition-all hover:text-gray-300 rounded-md">
+                    <button className="block w-full hover:opacity-90 py-3 text-white bg-bgWave transition-all text-2xl rounded-md">
                       ورود
                     </button>
                     <div className="pt-4">
@@ -67,28 +71,34 @@ const Login = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="my-4 font-mono text-md  grid md:grid-cols-2 sm:grid-cols-2 justify-between px-3">
+                  <div className="sm:flex sm:justify-around block justify-center text-center py-2 ">
                     <div>
                       <span>
                         <Link href="/forget">
-                          <a className="hover:text-green-500">
-                            فراموشی رمز عبور؟
-                          </a>
+                          <a className="text-white">فراموشی رمز عبور؟</a>
                         </Link>
                       </span>
                     </div>
-                    <div className="lg:pr-24">
+                    <div className="">
                       <span>
                         <Link href="/Regester/regester">
-                          <a className="hover:text-green-500">ثبت نام؟</a>
+                          <a className="text-white hover:opacity-90">
+                            ثبت نام؟
+                          </a>
                         </Link>
                       </span>
                     </div>
                   </div>
                 </form>
               </div>
-              <div className="md:mt-0 mt-5 items-center  rounded-xl ">
-                <img src="/Login/login.svg" className="w-10/12 mx-auto"></img>
+              <div className="md:mt-0   items-center text-center  w-full  flex justify-center rounded-xl">
+                <Image
+                  src={loginImage}
+                  alt="loginImage"
+                  width={500}
+                  height={500}
+                  className="mx-auto"
+                />
               </div>
             </div>
           </Form>
