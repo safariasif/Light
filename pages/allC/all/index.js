@@ -1,9 +1,10 @@
 
-import Navbar from '../../components/Navbar/navbar';
+import Navbar from '../../../components/Navbar/navbar';
 import Link from 'next/link';
 import { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Footer from '../../components/Footer/footer';
+import Footer from '../../../components/Footer/footer';
+
 import {
   faAngleDown,
   faCheckCircle,
@@ -22,11 +23,13 @@ import {
   faEye,
   faClose,
 } from '@fortawesome/free-solid-svg-icons';
-import Meta from '../../components/Meta/Meta';
-import Data from '../../constant/data'
-import Input from '../Regester/inputRegester';
-import SliderBlog from '../../components/slider/SliderBlog';
+import Meta from '../../../components/Meta/Meta';
+import Data from '../../../constant/data'
+import Input from '../../Regester/inputRegester';
+import SliderBlog from '../../../components/slider/SliderBlog';
 import Slider from 'react-slick/lib/slider';
+import Image from 'next/image'
+import CoursesBanner from '../../../components/Banner/BannerCourses';
 const Courses = () => {
   const [heart, setHeart] = useState(3);
   const [showModal, setShowModal] = useState(false);
@@ -40,29 +43,9 @@ const Courses = () => {
       <Meta title={'دوره های آموزشی'} />
       <Navbar />
       <div className="container-fluid m-0 p-0 items-center mx-4 pt-16">
-        <div className="row grid md:grid-cols-2 grid-cols-1">
-          <div className="text-center lg:mt-28 md:mt-12 mt-8">
-            <div className="headerCourse">
-              <h1 className="md:text-5xl text-3xl headerCourse">
-                یگ قدم به سمت تحلیل
-              </h1>
-            </div>
-            <div className="flex md:justify-end justify-center my-3 bannerCourse">
-              <h1 className="md:text-4xl text-2xl text-green-400 ">
-                ، یادگیری وب و
-                <span className="text-yellow-400"> دنیایی ارز دیجیتال </span>
-              </h1>
-            </div>
-            <div className="justify-end flex md:ml-0 ml-4 footerCourse">
-              <button className="text-pink-500">آموزش سریع و کاربردی</button>
-            </div>
-          </div>
-          <div className="">
-            <img src="/learning.svg" className="w-8/12 mx-auto"></img>
-          </div>
-        </div>
+        <CoursesBanner/>
         <div className="row grid mainpart mb-4 ">
-          <ul className="md:w-4/12 w-full ">
+          {/* <ul className="md:w-4/12 w-full ">
             <li className=" py-1 catagory">
               <div className="flex justify-between border  py-1 rounded-md catagory1">
                 <a className="">دسته بندی</a>
@@ -159,7 +142,7 @@ const Courses = () => {
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="text-center w-full mx-auto">
           <h2 className="text-2xl font-bold text-gray-700 my-8">
@@ -201,29 +184,31 @@ const Courses = () => {
                           className="hover:text-yellow-500"
                         />
                       </div>
-                      <img
+                      <Image
                         src={js.img}
+                        width={300}
+                        height={200}
                         className="hover:opacity-50 h-48 mx-auto transition-all"
-                      ></img>
+                      />
                       <div className="px-3">
-                        <h1 className="mt-3 mb-2">
+                        <h2 className="mt-3 mb-2">
                           <span className="text-gray-500">{js.info}</span>
                           <span className="text-blue-700 uppercase text-1xl font-bold font-mono  hover:text-blue-800">
                             {js.name}
                           </span>
-                        </h1>
-                        <h1 className="">
+                        </h2>
+                        <h2 className="">
                           <span className="text-gray-500">مدت : </span>
                           <span className="text-blue-700 uppercase text-1xl font-bold font-mono  hover:text-blue-800">
                             {js.time}
                           </span>
-                        </h1>
-                        <h1 className="mb-3">
+                        </h2>
+                        <h2 className="mb-3">
                           <span className="text-gray-500">مدرس : </span>
                           <span className="text-blue-700 uppercase text-1xl font-bold font-mono  hover:text-blue-800">
                             {js.instructor}
                           </span>
-                        </h1>
+                        </h2>
                       </div>
                     </div>
                   </Link>
@@ -238,18 +223,21 @@ const Courses = () => {
                           </span>
                         </div>
                         <div className="left flex pb-6">
-                          <div className="extends-btn" onClick={IncreaseHeart}>
-                            <a className="b-text" href="/">
+                          <div
+                            className="extends-btn bg-[green]"
+                            onClick={IncreaseHeart}
+                          >
+                            <span className="b-text" href="/">
                               علاقه
                               <span className="px-1">{heart}</span>
-                            </a>
+                            </span>
                             <FontAwesomeIcon
                               className="b-icon"
                               icon={faHeart}
                             />
                           </div>
                           <div
-                            className="extends-btn"
+                            className="extends-btn bg-[green]"
                             id="open-button"
                             onClick={() => setShowModal(true)}
                           >
@@ -337,18 +325,21 @@ const Courses = () => {
                         </span>
                       </div>
                       <div className="left flex pb-8">
-                        <div className="extends-btn" onClick={IncreaseHeart}>
-                          <a className="b-text" href="/">
+                        <div
+                          className="extends-btn bg-[green]"
+                          onClick={IncreaseHeart}
+                        >
+                          <span className="b-text">
                             علاقه
                             <span className="px-1">{heart}</span>
-                          </a>
+                          </span>
 
                           <FontAwesomeIcon className="b-icon" icon={faHeart} />
                         </div>
-                        <div className="extends-btn">
-                          <a className="b-text" href="/">
+                        <div className="extends-btn bg-[green]">
+                          <span className="b-text" href="/">
                             نمایش
-                          </a>
+                          </span>
                           <FontAwesomeIcon className="b-icon" icon={faEye} />
                         </div>
                       </div>

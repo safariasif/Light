@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image'
 import closeIcon from '../../public/close.svg';
 import opneIcon from '../../public/menu.svg';
+import LearningTearm from '../dropDown';
 const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
   console.log(name);
   const [open, setopen] = useState(false);
@@ -26,15 +27,13 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               </Link>
             </li>
             <li className="items">
-              <Link href="/courses/courses">
-                <a className="text-textWave">دوره های آموزشی</a>
-              </Link>
+              <LearningTearm />
             </li>
-            <li className="items">
+            {/* <li className="items">
               <Link href="/NewCourses/newcourses">
                 <a className="text-textWave">جدید ترین ها</a>
               </Link>
-            </li>
+            </li> */}
             <li className="items">
               <Link href="/Post/post">
                 <a className="text-textWave">پست ها</a>
@@ -49,7 +48,7 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               </a>
             </li>
             <li className="items">
-              <Link href="/Suggest/suggest">
+              <Link href="/Suggest/suggestForm">
                 <a className="text-textWave">پشنهادات</a>
               </Link>
             </li>
@@ -66,7 +65,7 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
             </li>
             <li className="items">
               <Link href="/About/about">
-                <a className="text-textWave">درباره ما</a>
+                <a className="text-textWave">درباره چراغ</a>
               </Link>
             </li>
             <span className="regester btn cursor-pointer lg:hidden block grid grid-cols-2 rounded text-center text-blue-800 font-bold px-5  w-full mt-2 justify-around">

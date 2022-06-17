@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '../../components/Footer/footer';
 import Input from '../../pages/Regester/inputRegester';
+import Image from 'next/image'
 import {
   faAngleDown,
   faCheckCircle,
@@ -20,6 +21,7 @@ import {
   faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link'
+import { mousePointer } from 'fontawesome';
 const SliderDetails = (props) => {
   return (
     <div className='py-6'>
@@ -51,10 +53,12 @@ const SliderDetails = (props) => {
                 className="hover:text-yellow-500"
               />
             </div>
-            <img
+            <Image
               src={props.src}
-              className="hover:opacity-50 h-48 mx-auto transition-all"
-            ></img>
+              width={300}
+              height ={180}
+              className="hover:opacity-50  mx-auto transition-all"
+            />
             <div className="px-3  text-right">
               <h1 className="mt-3 mb-2">
                 <span className="text-red-500">{props.info}</span>

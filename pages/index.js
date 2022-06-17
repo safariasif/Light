@@ -21,8 +21,9 @@ export default function Home(props) {
       <WhyLight />
       <OurTeacher />
       <Features />
+      <Accordaint />
       <Subscribe />
-      <Accordaint/>
+
       <Footer />
     </div>
   );
