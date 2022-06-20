@@ -63,9 +63,9 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
                 </a>
               </Link>
             </li>
-            <li className="items">
-              <Link href="/About/about">
-                <a className="text-textWave">درباره چراغ</a>
+            <li  className="items ">
+              <Link className='' href="">
+                <a className="text-textWave opacity-40">درباره چراغ</a>
               </Link>
             </li>
             <span className="regester btn cursor-pointer lg:hidden block grid grid-cols-2 rounded text-center text-blue-800 font-bold px-5  w-full mt-2 justify-around">

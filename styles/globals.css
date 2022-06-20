@@ -325,3 +325,10 @@ button::before{
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.PaymentModal{
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}

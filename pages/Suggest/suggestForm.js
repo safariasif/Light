@@ -14,7 +14,7 @@ const Suggest = () => {
       message: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().max(15, 'نام تان حداکثر ۱۵ کاراکتذ باشد').required("پر کردن فیلد نام الزامی میباشد"),
+      name: Yup.string().max(20, 'نام تان حداکثر ۲۰ کاراکتر باشد').required("پر کردن فیلد نام الزامی میباشد"),
       email: Yup.string().email('فرمت ایمیل تان درست نمیباشد').required("پر کردن فیلد ایمیل الزامی میباشد"),
       message: Yup.string().min(12, 'پیام تان حداقل ۱۲ کاراکتر باشد').required("پر کردن فیلد پیام الزامی میباشد"),
     }),
