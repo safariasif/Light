@@ -8,8 +8,8 @@ const Density = ({ setOpenDensity }) => {
   return (
     <div
       className={`py-2 ${
-        DensityLenght > 6 ? 'sm:w-[280px]' : 'sm:w-[280px]'
-      } mt-6  bg-white z-50 border border-gray-200 shadow-md absolute rounded-2xl sm_smobile:-right-14 sm:left-0`}
+        DensityLenght > 6 ? 'sm:w-[300px]' : 'sm:w-[300px]'
+      } mt-6  bg-white z-50 border border-gray-200 shadow-md absolute rounded-2xl sm_smobile:right-0 sm:left-0`}
     >
       <div>
         {DensityData.map((d, i) => (

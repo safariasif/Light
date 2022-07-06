@@ -1,5 +1,5 @@
 
-import Navbar from '../../../components/Navbar/navbar';
+import Nav from '../../../components/Navbar/nav';
 import Link from 'next/link';
 import { useState,useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -41,9 +41,9 @@ const Courses = () => {
   return (
     <div className=" m-0 p-0 ">
       <Meta title={'دوره های آموزشی'} />
-      <Navbar />
+      <Nav />
       <div className="container-fluid m-0 p-0 items-center mx-4 pt-16">
-        <CoursesBanner/>
+        <CoursesBanner />
         <div className="row grid mainpart mb-4 ">
           {/* <ul className="md:w-4/12 w-full ">
             <li className=" py-1 catagory">

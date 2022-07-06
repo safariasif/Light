@@ -1,11 +1,11 @@
 
 import Meta from '../../components/Meta/Meta';
-import Navbar from '../../components/Navbar/navbar';
 import { Component } from 'react';
 import Input from './inputRegester';
 import  Link  from 'next/link';
 import * as Yup from 'Yup';
 import { Formik, useFormik, Form } from 'formik';
+import Nav from '../../components/Navbar/nav';
 
 import SubFooter from '../../components/Footer/subfooter';
 import { useState } from 'react';
@@ -17,7 +17,7 @@ const Regester = () => {
     return (
       <div className="registerpage">
         <Meta title={'ثبت نام'} icon={'/404.svg'}></Meta>
-        <Navbar />
+        <Nav />
         <div className="regetser pt-36 md:flex px-12 md:justify-between block gap-x-36">
           <div className="text-start w-full  text-lg col-span-8 h-400">
             <Formik
@@ -182,7 +182,7 @@ const Regester = () => {
         <SubFooter
           title="روشنایی همه تاریکی ها"
           reserved="All Right Reserved"
-          bgColor={"white"}
+          bgColor={'white'}
         />
       </div>
     );

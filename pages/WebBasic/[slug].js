@@ -1,6 +1,6 @@
 import Data from "../../constant/data";
 import { useRouter } from "next/dist/client/router";
-import Navbar from "../../components/Navbar/navbar";
+import Nav from "../../components/Navbar/nav";
 import Footer from "../../components/Footer/footer";
 import Meta from "../../components/Meta/Meta";
 import Link from 'next/link';
@@ -42,7 +42,7 @@ const Slug =()=>{
     return (
       <div>
         <Meta title={items.name}></Meta>
-        <Navbar />
+        <Nav />
         <div className="px-4  rounded-md  pt-28">
           <h1 className="sm:pr-12 pr-4  pb-2 text-textWave text-2xl">
             شروع {items.genralName}

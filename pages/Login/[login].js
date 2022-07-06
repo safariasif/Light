@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image  from 'next/image';
-import Navbar from '../../components/Navbar/navbar'
+import Nav from '../../components/Navbar/nav';
 import Meta from '../../components/Meta/Meta'
 import Input from '../Regester/inputRegester';
 import DashBoard from '../AdminBord/[dashboard]';
@@ -15,7 +15,7 @@ const Login = () => {
     return (
       <div className="loginpage">
         <Meta title={'ورود'}></Meta>
-        <Navbar />
+        <Nav />
         <Formik
           initialValues={{
             email: '',

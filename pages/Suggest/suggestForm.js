@@ -1,6 +1,6 @@
 
 import Meta from "../../components/Meta/Meta";
-import Navbar from '../../components/Navbar/navbar'
+import Nav from "../../components/Navbar/nav";
 import SubFooter from "../../components/Footer/subfooter";
 import * as Yup from 'Yup';
 import {  useFormik} from 'formik';
@@ -24,7 +24,7 @@ const Suggest = () => {
     return (
       <div>
         <Meta title={'نظریات / پشنهادات'} />
-        <Navbar />
+        <Nav/>
         <div className="sm:pt-36 pt-24 md:px-6 sm:px-6 sm:grid sm:grid-cols-2 grid-cols-1 px-3 md:gap-x-8 sm:gap-x-4">
           <div>
             <div>

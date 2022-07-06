@@ -2,7 +2,7 @@ import Link from "next/link";
 import Meta from "../components/Meta/Meta";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import Navbar from "../components/Navbar/navbar";
+import Nav from "../components/Navbar/nav";
 const NotFount=()=>{
   const router = useRouter();
   useEffect(() => {
@@ -13,7 +13,7 @@ const NotFount=()=>{
   }, []);
   return (
     <>
-      <Navbar/>
+      <Nav/>
       <div className="text-center pt-36 cursor-pointer">
         <Meta title={'صفحه یافت نشد'}></Meta>
         {/* <h1 className="text-blue-600 font-bold text-8xl">404</h1> */}

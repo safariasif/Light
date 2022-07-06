@@ -15,7 +15,7 @@ const DensityItem = ({
   const router = useRouter();
   return (
       <div
-        className={`mx-3  flex  justify-between text-textWave hover:bg-bgWave hover:text-white rounded-md transition-all  `}
+        className={`mx-6  flex  justify-between text-textWave hover:bg-bgWave hover:text-white rounded-md transition-all  `}
       onClick={clickHandler}
       >
         <div
