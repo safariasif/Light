@@ -15,13 +15,12 @@ const Density = ({ setOpenDensity }) => {
         {DensityData.map((d, i) => (
           <DensityItem
                 text={d.text}
-                link={d.link}
+            link={d.link}
+            id={d.id}
             index={i}
             key={i}
-            /* setSelectedDensity={setSelectedDensity} */
             setOpenDensity={setOpenDensity}
             DensityLenght={DensityLenght}
-            /* selected={selectedDensity === i} */
           />
         ))}
       </div>

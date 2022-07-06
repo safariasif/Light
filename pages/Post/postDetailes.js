@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import profile from '../../public/profile/profile (2).jpg';
-import postImage from '../../public/Post/post1.png';
+import profile from '../../public/profile/img.jpg';
+import postImage from '../../public/Post/clean-code-image.png';
+import logo from '../../public/logo/light.png';
 import { useState } from 'react';
 const PostDetailes = () => {
     const [dots, setDots] = useState(true);
@@ -10,9 +11,9 @@ const PostDetailes = () => {
     const [heart, setHeart] = useState(4);
   return (
     <section className="mb-12">
-      <article>
-        <div className="w-6/12 mx-auto border border-[#1E3D59] shadow-xl rounded-2xl p-4">
-          <div className="flex justify-between">
+      <article className="sm:grid sm:grid-cols-3 block md:px-12 sm:px-4 px-4 md:gap-x-8 sm:gap-x-4 mb-24 ">
+        <div className="col-span-1   bg-gray sm:rounded-xl rounded-t-xl border pt-4 pb-4 pr-4">
+          <div className="block ">
             <div className="flex ">
               <Image
                 src={profile}
@@ -21,11 +22,48 @@ const PostDetailes = () => {
                 className="rounded-full"
               />
               <div className="posttitle mt-5 pr-3">
-                <h2 className="mt-3 text-lg text-textWave ">آصف صفری</h2>
-                <span className="text-[gray]">دیروز 8:15:00 </span>
+                <h2 className="mt-3 text-lg text-textWave ">علی مهران</h2>
+                <span className="text-[gray]">12 جون ۲۰۲۰</span>
               </div>
             </div>
-            <div className="flex justify-between">
+            <div className="pr-4 mt-8 ">
+              <h2>موضوع مقاله : </h2>
+              <h2 className="pr-2">
+                چی طور کود بنویسم که قابل قبول برای همه باشد؟{' '}
+              </h2>
+            </div>
+            <div className="pr-4 mt-4 flex">
+              <h2>نویسنده :</h2>
+              <h2 className="">علی مهران</h2>
+            </div>
+            <div className="pr-4 mt-4 flex">
+              <h2>مترجم :</h2>
+              <h2 className="">حسین یاری </h2>
+            </div>
+            <div className="pr-4 mt-4 flex">
+              <h2>تاریح نشر :</h2>
+              <h2 className="">12 جون 2020</h2>
+            </div>
+            <div className="pr-4 mt-4 md:flex block">
+              <h2>لینک رسمی :</h2>
+              <a className="text-md hover:text-textWave" href="#">
+                www.freecodeComp.com
+              </a>
+            </div>
+            <div className="pr-4 mt-4 flex">
+              <h2>خواند مقاله :</h2>
+              <h2 className="">۱۰ دقیقه</h2>
+            </div>
+            <div className="text-center items-center pl-4 pt-4">
+              <Image
+                src={logo}
+                width={150}
+                height={150}
+                className="mx-auto"
+                alt="light"
+              />
+            </div>
+            {/* <div className="flex justify-between">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,44 +88,76 @@ const PostDetailes = () => {
                   <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
                 </svg>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="px-5 py-3">
-            <p
-              className={`${
-                dots ? 'demo-2' : 'demo-1'
-              } cursor-pointer text-textWave text-md`}
-              onClick={() => {
-                setDots(!dots);
-              }}
-            >
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-              جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
-              طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
-              فارسی ایجاد کرد. در این صورت
-            </p>
-          </div>
-          <div className="mx-auto">
+        </div>
+        <div className="col-span-2  border sm:rounded-xl rounded-b-xl rounded-t-none sm:h-[630px] sm:overflow-y-scroll bg-gray shadow-xl rounded-2xl p-4">
+          <h2 className="px-4 py-5 text-2xl text-textWave">
+            چی طور کود بنویسم که قابل قبول برای همه باشد:{' '}
+          </h2>
+          <h2 className="px-4 py-5 text-xl text-textWave">
+            یگ برنامه نویس بد کدی مینویسه که فقط یگ کمپیوتر میتانه اونو درک کنه.
+            اما یگ برنامه نویس خوب کود مینویسه که یگ انسان میتانه اونو متوجه
+            بشه.
+            <p className="flex justify-end text-sm">__ مارتین فاولر</p>
+          </h2>
+          <div className="mx-auto items-center text-center">
             <Image
               src={postImage}
-              width={600}
+              width={700}
               height={300}
               className="mx-auto"
             />
           </div>
+          <div className="px-5 py-3">
+            <h4>
+              نوشتن کدهای تمیز، قابل فهم و قابل نگهداری مهارتی است که برای هر
+              توسعه دهنده ای ضروری است که به آن مسلط شود.
+            </h4>
+            <h4 className="text-textWave text-xl my-2">
+              چگونه متغیر های خود را نامگذاری کنیم؟
+            </h4>
+            <div>
+              <p className="pr-4">
+                در علوم کامپیوتر فقط دو چیز سخت وجود دارد: نامعتبر کردن حافظه
+                پنهان و نامگذاری متغیر ها
+              </p>
+              <p
+                className={`${
+                  dots ? 'demo-2' : 'demo-1'
+                } cursor-pointer pr-4 transition-all duration-500  text-md`}
+                onClick={() => {
+                  setDots(!dots);
+                }}
+              >
+                پیدا کردن یک نام خوب ممکن است کمی طول بکشد، اما در آینده زمان
+                بیشتری برای شما و تیمتان ذخیره می‌کند. و من مطمئن هستم که اکثر
+                خوانندگان با موقعیتی مواجه شده اند که شما فقط چند ماه بعد از کد
+                خود بازدید می کنید و درک آنچه قبلا انجام داده اید برایتان مشکل
+                است.
+                <h2 className="text-xl text-textWave my-2">
+                  نحوه ایجاد نام های معنی دار
+                </h2>
+                <p>
+                  از نظرات برای توضیح اینکه چرا از یک متغیر استفاده شده است
+                  استفاده نکنید. اگر نامی نیاز به نظر دارد، باید زمان خود را صرف
+                  تغییر نام آن متغیر به جای نوشتن نظر کنید.
+                </p>
+              </p>
+            </div>
+          </div>
+
           <div className="flex justify-evenly mt-5">
             <i>
               <div
                 className="extends-btn hover:border rounded-md "
-                onClick={()=>{setLike(like+1)}}
+                onClick={() => {
+                  setLike(like + 1);
+                }}
               >
                 <span className="b-text text-sm text-textWave" href="/">
                   پسندیدن
-                <span className="px-1 text-textWave">{ like}</span>
+                  <span className="px-1 text-textWave">{like}</span>
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,11 +174,13 @@ const PostDetailes = () => {
             <i>
               <div
                 className="extends-btn hover:border rounded-md "
-                onClick={()=>{setComment(comment+1)}}
+                onClick={() => {
+                  setComment(comment + 1);
+                }}
               >
                 <span className="b-text text-sm text-textWave" href="/">
                   نظر
-                                  <span className="px-1 text-textWave">{ comment}</span>
+                  <span className="px-1 text-textWave">{comment}</span>
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -126,11 +198,13 @@ const PostDetailes = () => {
             <i>
               <div
                 className="extends-btn hover:border rounded-md "
-                onClick={()=>{setHeart(heart+1)}}
+                onClick={() => {
+                  setHeart(heart + 1);
+                }}
               >
                 <span className="b-text text-sm text-textWave" href="/">
                   علاقه
-                                  <span className="px-1 text-textWave">{ heart}</span>
+                  <span className="px-1 text-textWave">{heart}</span>
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,9 @@ import {
   FaTwitter,
   FaInstagramSquare,
 } from 'react-icons/fa';
-import Link  from 'next/link';
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../public/logo/light1.png';
 const Footer = () => {
   return (
     <div className="footer mt-12 text-white bg-white m-0 p-0">
@@ -29,7 +31,7 @@ const Footer = () => {
             تلاش ما درباره کیفیت آموزش است
           </span>
         </div>
-        <div>
+        {/* <div>
           <h2 className="pb-2">پشنهاد و نظریات خود را با ما شریک کنید</h2>
           <input
             type="text"
@@ -47,7 +49,7 @@ const Footer = () => {
           <button className="d-block w-full rounded py-1 bg-white text-textWave hover:bg-opacity-70 transition-all">
             ارسال
           </button>
-        </div>
+        </div> */}
         <div className="">
           <div className="">
             <h6>پل ارتباطی :</h6>
@@ -88,6 +90,9 @@ const Footer = () => {
           <div className="pt-4">
             <h6>دنبال کیند </h6>
           </div>
+        </div>
+        <div className=' items-start'>
+          <Image src={logo} width={200} height={150} alt="light" />
         </div>
       </div>
     </div>

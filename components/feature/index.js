@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import lightImage from '../../public/features.jpg';
+import lightImage from '../../public/feature.svg';
 import { Loader } from 'next/dynamic';
 const Features = () => {
   return (
@@ -8,8 +8,8 @@ const Features = () => {
         <div className=" block items-center">
           <div className="text-center items-center pt-3">
             <Image
-              width={70}
-               height ={50 }
+              width={60}
+               height ={40 }
               loader={Loader}
               src={lightImage}
               layout="responsive"

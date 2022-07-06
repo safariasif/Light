@@ -6,12 +6,12 @@ import Image from 'next/image'
 import closeIcon from '../../public/close.svg';
 import opneIcon from '../../public/menu.svg';
 import LearningTearm from '../dropDown';
+import logo from "../../public/logo/light.png";
 const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
-  console.log(name);
   const [open, setopen] = useState(false);
   return (
     <div className="" style={{ background: bgColor }}>
-      <div className="container-fluid m-0 p-0 navigation-bar bg-white z-10 py-5  fixed w-full shadow-gray-400 shadow-2xl">
+      <div className="container-fluid m-0 p-0 navigation-bar bg-white pt-2 pb-2 z-10   fixed w-full shadow-gray-400 shadow-2xl">
         <div className="m-0 p-0 row  lg:flex lg:justify-between lg:items-center rounded text-center ">
           <ul
             className={`text-right lg:flex lg:items-center z-[-1] lg:z-auto lg:static absolute  bg-white w-[100%] right-0 px-4 lg:w-auto lg:py-0 py-4  lg:pl-0 pl-7 lg:opacity-100 transition-all ease-in duration-500 ${
@@ -21,9 +21,11 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
             }`}
             style={{ background: bgColor }}
           >
-            <li className="items">
+            <li className="items hover:-translate-x hover:scale-x-125 hover:scale-y-125 transition duration-500 ease-in-out focus:outline-none">
               <Link href="/">
-                <a className="text-textWave active border-b border-b-4">خانه</a>
+                <a className="text-textWave active border-b border-b-4 ">
+                  خانه
+                </a>
               </Link>
             </li>
             <li className="items">
@@ -63,8 +65,8 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
                 </a>
               </Link>
             </li>
-            <li  className="items ">
-              <Link className='' href="">
+            <li className="items ">
+              <Link className="" href="">
                 <a className="text-textWave opacity-40">درباره چراغ</a>
               </Link>
             </li>
@@ -83,6 +85,7 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
                     / ثبت نام
                   </a>
                 </Link>
+                <Image src={logo} width={50} height={50} />
               </span>
               <input
                 type="text"
@@ -122,20 +125,28 @@ const Navbar = ({ name, bgColor, textColor, hoverColor }) => {
               )}
             </span>
 
-            <span className="regester btn cursor-pointer hidden lg:block rounded text-center text-blue-800 font-bold px-5 py-2">
-              <Link href="/Login/login">
-                <a style={{ color: textColor }} className="login text-textWave">
-                  ورود
-                </a>
-              </Link>
-              <Link href="/Regester/regester">
-                <a
-                  style={{ color: textColor }}
-                  className="hover:text-opacity-70 text-textWave"
-                >
-                  / ثبت نام
-                </a>
-              </Link>
+            <span className="regester   btn cursor-pointer flex items-center rounded text-center text-blue-800 font-bold px-5">
+              <div>
+                <Link href="/Login/login">
+                  <a
+                    style={{ color: textColor }}
+                    className="login text-textWave"
+                  >
+                    ورود
+                  </a>
+                </Link>
+                <Link href="/Regester/regester">
+                  <a
+                    style={{ color: textColor }}
+                    className="hover:text-opacity-70 text-textWave"
+                  >
+                    / ثبت نام
+                  </a>
+                </Link>
+              </div>
+              <div className=''>
+                <Image src={logo} width={70} height={60} />
+              </div>
             </span>
             <span className="regester lg:hidden block btn cursor-pointer rounded text-center text-blue-800 font-bold lg:p-0 pl-8">
               <Link href="/login">

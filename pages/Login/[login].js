@@ -62,7 +62,7 @@ const Login = () => {
                     <input className="outline-none" type="checkbox"></input>
                   </div>
                   <div className="my-4">
-                    <button className="block w-full hover:opacity-90 py-3 text-white bg-bgWave transition-all text-2xl rounded-md">
+                    <button className="block w-full hover:opacity-90 py-3 text-white bg-bgWave transition-all text-2xl rounded-md hover:-translate-x hover:scale-x-105 hover:scale-y-105 duration-500 ease-in-out focus:outline-none">
                       ورود
                     </button>
                     <div className="pt-4">
@@ -104,8 +104,9 @@ const Login = () => {
           </Form>
         </Formik>
         <SubFooter
-          title="روشنایی همه تاریکی ها 'چراغ'"
+          title="روشنایی همه تاریکی ها"
           reserved="All Right Reserved"
+          bgColor={'white'}
         />
       </div>
     );

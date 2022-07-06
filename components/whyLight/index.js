@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import lightImage from '../../public/WhyLight/whylight.jpg';
+import lightImage from '../../public/WhyLight/whyLight.svg';
 import { Loader } from 'next/dynamic';
 const WhyLight = () => {
   return (
-    <section className="bg-[#F8F9F9]  w-100 rounded-t-[70px]  pt-6 pb-16 mt-12">
+    <section className="border-t w-100 rounded-t-[70px]  pt-6 pb-16 mt-12">
       <article className="grid md:grid-cols-2 items-center md:px-6 sm_mmobile:px-12 px-4">
         <div className=" md:px-12 px-0 text-center w-full">
           <h2 className="lg:text-4xl text-3xl  font-bold text-center lg:pb-10 pb-5 text-textWave tracking-widest">
@@ -23,7 +23,7 @@ const WhyLight = () => {
           </div>
         </div>
         <div className=" block items-center">
-          <div className="text-center items-center pt-3">
+          <div className="text-center items-center pt-6">
             <Image
               width={200}
               height={120}

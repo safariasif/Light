@@ -82,7 +82,7 @@ const Suggest = () => {
                   ) : null}
                 </div>
                 <div className="items-center flex  mx-auto text-center ">
-                  <button className=" text-white text-2xl rounded-md w-full py-2 my-2 bg-bgWave">
+                  <button className=" text-white text-2xl rounded-md w-10/12 mx-auto py-2 my-2 bg-bgWave hover:-translate-x hover:scale-105 duration-500">
                     ارسال
                   </button>
                 </div>

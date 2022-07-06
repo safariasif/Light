@@ -11,13 +11,21 @@ const Input = ({...props}) => {
       </label>
       <div className="flex justify-between px-3 border rounded-full  bg-white">
         <input
-          className={`${props.width} py-1 pl-4 px-3 outline-none mx-auto   shadow-2xl ${
+          className={`${
+            props.width
+          } py-2 pl-4 px-3 outline-none mx-auto   shadow-2xl ${
             meta.touched && meta.error && 'is-invalid'
           }`}
           {...field}
           {...props}
           autoComplete="off"
-          type={showEye ? 'password' : 'text'}
+          type={
+            props.name != 'password' && props.name != 'repassword'
+              ? 'text'
+              : showEye
+              ? 'password'
+              : 'text'
+          }
         />
         {props.icons ? (
           <div

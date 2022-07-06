@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Image from "next/image";
 
 const Meta = ({ title, icon }) => {
   return (
@@ -6,7 +7,8 @@ const Meta = ({ title, icon }) => {
       <Head>
         <meta lang="en"></meta>
         <title>{title}</title>
-        <link rel="icon" className="h-12 w-12" href="/logo/lamp.jpg"></link>
+        <link rel="icon"  href="/logo/light.png">
+        </link>
         <link href={icon}></link>
       </Head>
     </div>

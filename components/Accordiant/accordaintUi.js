@@ -3,6 +3,7 @@ import React from 'react';
 
 const AccordaintUi = ({ title, id, index, setIndex, answer }) => {
   const handelClike = (id) => index !== id && setIndex(id);
+  
   return (
     <div>
       <section className="md:w-8/12 sm:w-10/12 w-11/12 mx-auto shadow-2xl border rounded-xl mb-8 mt-8 transition-all">
@@ -11,7 +12,7 @@ const AccordaintUi = ({ title, id, index, setIndex, answer }) => {
             onClick={() => {
               handelClike(id);
             }}
-            className="flex justify-between px-8 pb-4 rounded-xl pt-4 bg-bgWave text-white"
+            className="flex justify-between cursor-pointer px-8 pb-4 rounded-xl pt-4 bg-bgWave text-white"
           >
             <h4 className="sm:text-xl text-sm">{title}</h4>
             {index != id ? (

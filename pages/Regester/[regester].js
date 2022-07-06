@@ -86,7 +86,7 @@ const Regester = () => {
                     width="w-full"
                   />
                   <div className="my-4 pt-4 w-full">
-                    <button className="block w-full  py-2 bg-bgWave text-white  transition-all hover:text-gray-300 rounded-full shadow-lg">
+                    <button className="block w-full  py-3 bg-bgWave text-white  transition-all hover:text-gray-300 rounded-full shadow-lg hover:-translate-x hover:scale-105 transition duration-500 ease-in-out focus:outline-none shadow-inner">
                       ثبت نام
                     </button>
                     <div className="pt-4">
@@ -180,8 +180,9 @@ const Regester = () => {
           </div>
         </div>
         <SubFooter
-          title="روشنایی همه تاریکی ها 'چراغ'"
+          title="روشنایی همه تاریکی ها"
           reserved="All Right Reserved"
+          bgColor={"white"}
         />
       </div>
     );

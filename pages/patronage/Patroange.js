@@ -8,8 +8,9 @@ import SubFoooter from '../../components/Footer/subfooter'
 import { useEffect, useState } from "react";
 import { useFormik } from "Formik";
 import * as Yup from 'yup';
-import { wind } from "fontawesome";
-
+import Image from "next/image";
+import logo from '../../public/logo/light1.png';
+import logo1 from '../../public/logo/light.png';
 
 const Parotange=()=>{
   const [pay, setpay] = useState();
@@ -53,7 +54,7 @@ const Parotange=()=>{
           }`}
         >
           <div className="block bg-bgWave sm:mb-0 mb-8 p-0 m-0 shadow-2xl text-white rounded-3xl">
-            <div className="text-center items-center md:pt-24 md:pb-20 sm:pt-20 sm:pb-16 pt-10 pb-8">
+            <div className="text-center items-center md:pt-12 md:pb-12 sm:pt-20 sm:pb-16 pt-10 pb-8">
               <span className="px-2 md:text-5xl sm:text-3xl text-2xl   tracking-wider">
                 حمایت از چراغ
               </span>
@@ -68,10 +69,11 @@ const Parotange=()=>{
               <p className="">
                 حمایت از چراغ باعث دلگرمی و رشد بیشتر چراغ خواهد شد
               </p>
-              <p className=" my-2">
+              <p className=" mt-2 mb-3">
                 بجای شکست دادن یگدیگر بیاید از همدیگر حمایت کنیم تا همه ما موفق
                 شویم "
               </p>
+              <Image src={logo} width={200} height={200} alt="light" />
             </div>
           </div>
           <div>
@@ -140,10 +142,10 @@ const Parotange=()=>{
         {openModal ? (
           <>
             <section
-              className={`PaymentModal  px-4 py-2 md:w-9/12 sm:w-10/12 w-11/12  bg-white
-              }  sm:space-x-0 space-x-4 shadow-2xl border-[#1E3D59]   z-50 border rounded-xl mx-auto`}
+              className={`PaymentModal  px-4 py-2 lg:w-10/12 md:w-11/12 sm:w-11/12 w-10/12 h-[500px]  bg-white
+              }  sm:space-x-0 sm:space-x-4 space-x-0 shadow-2xl border-[#1E3D59]    z-50 border rounded-xl mx-auto`}
             >
-              <div
+              {/* <div
                 onClick={ChangeState}
                 className="flex justify-end pb-3 cursor-pointer"
               >
@@ -158,8 +160,8 @@ const Parotange=()=>{
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                 </svg>
-              </div>
-              <div className="grid grid-cols-3 gap-x-4 ">
+              </div> */}
+              <div className="md:grid md:grid-cols-3 block gap-x-4 ">
                 <div className="cartInformation col-span-2 bg-gray rounded-2xl">
                   <article>
                     <div className="px-4  w-fit py-2 mt-3 mx-3 mb-4 border-b-2 border-[#1E3D59]">
@@ -167,7 +169,7 @@ const Parotange=()=>{
                     </div>
                   </article>
                   <form action="#" className="">
-                    <div className="grid grid-cols-2 my-4 space-x-3 pr-6">
+                    <div className="sm:grid sm:grid-cols-2 block my-4 space-x-3 pr-6">
                       <div className="">
                         <label className="text-textWave">شماره کارت</label>
                         <p className="text-sm text-[#444]">
@@ -182,7 +184,7 @@ const Parotange=()=>{
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 my-4 space-x-3 pr-6">
+                    <div className="sm:grid sm:grid-cols-2 block my-4 space-x-3 pr-6">
                       <div>
                         <label className="text-textWave">شماره شناسای</label>
                         <p className="text-sm text-[#444]">
@@ -197,7 +199,7 @@ const Parotange=()=>{
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 my-4 space-x-3 pr-6">
+                    <div className="sm:grid sm:grid-cols-2 block my-4 space-x-3 pr-6">
                       <div>
                         <label className="text-textWave">
                           تاریخ انقضای کارت
@@ -214,7 +216,7 @@ const Parotange=()=>{
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 my-4 space-x-3 pr-6">
+                    <div className="sm:grid sm:grid-cols-2 block my-4 space-x-3 pr-6">
                       <div>
                         <label className="text-textWave">کود امنیتی</label>
                         <p className="text-sm text-[#444]">
@@ -229,7 +231,7 @@ const Parotange=()=>{
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 my-4 space-x-3 pr-6">
+                    <div className="sm:grid sm:grid-cols-2 block my-4 space-x-3 pr-6">
                       <div>
                         <label className="text-textWave">ایمیل(اختیاری)</label>
                         <p className="text-sm text-[#444]">
@@ -247,13 +249,13 @@ const Parotange=()=>{
                     <div className="flex gap-x-3 px-3 mt-10 mb-4">
                       <button
                         type="onSubmit"
-                        className="bg-bgWave text-white transition-all hover:bg-opacity-80 border-white rounded-2xl w-full py-3"
+                        className="bg-bgWave text-white transition-all hover:bg-opacity-80 border-white rounded-2xl w-full py-3 hover:-translate-x hover:scale-105 duration-500"
                       >
                         پرداخت
                       </button>
                       <button
                         onClick={ChangeState}
-                        className=" text-textWave border hover:bg-white  transition-all border-[#1E3D59] rounded-2xl w-full py-3"
+                        className=" text-textWave border hover:bg-white  transition-all border-[#1E3D59] rounded-2xl w-full py-3 hover:-translate-x hover:scale-105 duration-500"
                       >
                         انصراف
                       </button>
@@ -272,7 +274,7 @@ const Parotange=()=>{
                     <p>مبلغ قابل پرداخت</p>
                   </div>
                   <div>
-                    <ul className="pr-6 pt-8 list-disc">
+                    <ul className="pr-6 pt-4 list-disc">
                       <li className=" text-textWave">
                         <span>فرستنده : </span>
                         <span className="capitalize">{formik.values.name}</span>
@@ -292,9 +294,15 @@ const Parotange=()=>{
                       <p className="text-center text-xl mt-4 text-textWave">
                         این پزیرنده توسط تمام بانک های افغانستان اجرا میگردد
                       </p>
-                      <p className="text-center block mt-10 pb-4 text-md text-textWave">
+                      <p className="text-center block mt-2 pb-2 text-md text-textWave">
                         سپاس از همکاری تان{' '}
                         <p className="capitalize">{formik.values.name} عزیز</p>
+                        <Image
+                          src={logo1}
+                          width={70}
+                          height={70}
+                          alt="light"
+                        />
                       </p>
                     </ul>
                   </div>
@@ -304,7 +312,7 @@ const Parotange=()=>{
           </>
         ) : null}
         <SubFoooter
-          title="روشنایی همه تاریکی ها 'چراغ'"
+          title="روشنایی همه تاریکی ها"
           reserved="All Right Reserved"
         />
       </div>
